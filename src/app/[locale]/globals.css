@@ -1,0 +1,500 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "TajM";
+}
+body {
+  background: white;
+  overflow-x: hidden;
+  height: 500vh;
+}
+@font-face {
+  font-family: "TajL";
+  src: url("/fonts/Tajawal-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TajM";
+  src: url("/fonts/Tajawal-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TajB";
+  src: url("/fonts/Tajawal-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+input,
+textarea,
+.mantine-FileInput-input div,
+form .partImgFile .partImg p {
+  text-transform: none !important;
+}
+input::placeholder {
+  font-family: "TajL";
+}
+:root {
+  --main_color:hsla(277, 40%, 63%, 1);
+  --second_color:hsla(176, 58%, 52%, 1);
+  --three_color:hsla(80, 63%, 64%, 1);
+
+}
+h1 {
+  font-family: "TajB";
+}
+.p70 {
+  padding: 74px 0px;
+}
+p {
+  margin: 0;
+  font-family: "TajL";
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none !important;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(82deg, hsla(176, 58%, 52%, 1)20%, hsla(80, 63%, 64%, 1),hsla(277, 40%, 63%, 1) 70%);
+  border-radius: 30px;
+}
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+
+@media (max-width: 992px) {
+ 
+  .p70 {
+    padding: 40px 0px;
+  }
+}
+@media (max-width: 768px) {
+  .p70 {
+    padding: 30px 0px;
+  }
+}
+@media (max-width: 480px) {
+ 
+}
+/*==================================start navbar==============================*/
+/*start navbar*/
+/* Remove border from toggler */
+
+.navbar {
+  padding-top: 1rem;
+  background-color: #ffffff8c;
+backdrop-filter: blur(11px);
+position: relative;
+}
+.navbar::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  height: 506px;
+  width: 500px;
+  background-image: url('../../../public/images/headNav.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: var(--main_color);
+  display: block;
+  transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar {
+  margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: var(--main_color);
+}
+
+.navbar-collapse {
+  flex-grow: 0.5;
+}
+
+.navbar-nav {
+  margin: 0 !important;
+  gap: 12px;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.navbar-brand {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar-brand svg {
+  width: 70px;
+}
+.navbar-brand h2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: "TajB";
+  color: var(--main_color);
+  margin: 0;
+}
+.navbar-brand img {
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "TajL";
+  font-weight: 400;
+  transition: 0.3s;
+  background-color: var(--main_color);
+  padding: 18px 40px;
+  color: white;
+  border-radius: 24px 0px 24px 24px;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--main_color);
+}
+
+.navbar-nav .nav-link.active {
+  color: white;
+  font-weight: 700;
+  font-family: "TajB";
+  background-color: var(--second_color);
+}
+
+.navbar .btn-lang {
+  font-size: 16px;
+  background-color: var(--main_color);
+  border: none;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 45px;
+  line-height: 24px;
+  font-family: TajL;
+  font-weight: 400;
+  transition: all 0.4s ease 0s;
+}
+
+.navbar .btn-lang:hover {
+  box-shadow: 0px 6px 21px #8a64bc;
+}
+
+.endnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.endnav .btn_nav {
+  width: 74px;
+  height: 30px;
+  font-size: 14px;
+}
+
+html[dir="rtl"] .endnav .btn_nav {
+  font-size: 20px;
+}
+
+.endnav h4 {
+  font-size: 14px;
+  line-height: 18px;
+  background: #ff7443;
+  border-radius: 10px;
+  padding: 6px 8px;
+  color: white;
+  margin: 0;
+}
+
+html[dir="rtl"] .endnav h4 {
+  font-size: 20px;
+}
+
+.endnav ul {
+  min-width: 130px;
+  width: 140px;
+  max-width: 140px;
+}
+
+.endnav ul li {
+}
+
+.endnav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px auto;
+}
+
+.endnav ul li:last-of-type {
+  padding: 12px 16px 6px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.endnav ul li p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #4e4e4e;
+}
+
+html[dir="rtl"] .endnav ul li p {
+  font-size: 20px;
+}
+
+.endnav .dropdown-menu[data-bs-popper] {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+.navbar-toggler2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-toggler2 .btn_page {
+  width: 90px;
+  height: 34px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+li.nav-item.lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+li.nav-item.lang span {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+li.nav-item.lang a {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "TajL";
+  line-height: 24px;
+  transition: 0.4s;
+  color: black;
+}
+li.nav-item.lang a.active {
+  color: var(--main_color);
+  font-family: "TajB";
+  font-weight: 700;
+}
+@media (min-width: 500px) {
+  .navbar .container {
+    max-width: 1920px !important;
+    padding: 0px 50px;
+  }
+}
+@media (min-width: 1400px) {
+  .navbar .container {
+    padding: 0px 75px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar .container {
+    padding: 0px 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .navbar-expand-lg .navbar-toggler2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .navbar-brand img {
+    height: 70px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-brand img {
+    height: 70px;
+  }
+
+  .navbar-nav {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding-top: 0rem;
+  }
+  .endnav {
+    margin-bottom: 34px;
+  }
+
+  .btn-lang {
+  }
+
+  .navbar-collapse {
+    background-color: var(--main_color);
+    border-radius: 20px;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar-nav .nav-link.active {
+    color: white;
+  }
+  .navbar-nav .nav-link {
+    color: white;
+  }
+  .navbar-nav .nav-link:hover {
+    color: white;
+  }
+  li.nav-item.lang a.active {
+    color: white;
+  }
+  .navbar .btn-lang1 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-brand h2 {
+    font-size: 24px;
+    font-family: "TajB";
+  }
+  .navbar-brand {
+    gap: 12px;
+  }
+  .navbar-brand svg {
+    width: 66px;
+  }
+  .navbar .btn-lang {
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-size: 16px;
+  }
+  .navbar-toggler2 {
+    gap: 6px;
+  }
+  .navbar .container {
+    padding: 0px 14px;
+  }
+  li.nav-item.lang button {
+    font-size: 18px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 580px) {
+  .navbar-brand img {
+    width: 220px;
+  }
+
+  .toggler-icon {
+    width: 26px;
+    height: 2px;
+  }
+
+  .navbar-toggler2 {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar-brand svg {
+    width: 54px;
+  }
+  .navbar-brand h2 {
+    font-size: 20px;
+  }
+  .navbar .btn-lang {
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+}
+
+/*==================================end navbar==============================*/
