@@ -37,10 +37,9 @@ input::placeholder {
   font-family: "TajL";
 }
 :root {
-  --main_color:hsla(277, 40%, 63%, 1);
-  --second_color:hsla(176, 58%, 52%, 1);
-  --three_color:hsla(80, 63%, 64%, 1);
-
+  --main_color: hsla(277, 40%, 63%, 1);
+  --second_color: hsla(176, 58%, 52%, 1);
+  --three_color: hsla(80, 63%, 64%, 1);
 }
 h1 {
   font-family: "TajB";
@@ -70,20 +69,29 @@ html::-webkit-scrollbar {
   width: 10px;
 }
 html::-webkit-scrollbar-thumb {
-  background: linear-gradient(82deg, hsla(176, 58%, 52%, 1)20%, hsla(80, 63%, 64%, 1),hsla(277, 40%, 63%, 1) 70%);
+  background: linear-gradient(
+    82deg,
+    hsla(176, 58%, 52%, 1) 20%,
+    hsla(80, 63%, 64%, 1),
+    hsla(277, 40%, 63%, 1) 70%
+  );
   border-radius: 30px;
 }
 html::-webkit-scrollbar-track {
   background-color: transparent;
 }
-
-
+main{
+  padding-top: 130px;
+  position: relative;
+}
 
 @media (max-width: 992px) {
- 
   .p70 {
     padding: 40px 0px;
   }
+  main {
+    padding-top: 40px;
+}
 }
 @media (max-width: 768px) {
   .p70 {
@@ -91,7 +99,6 @@ html::-webkit-scrollbar-track {
   }
 }
 @media (max-width: 480px) {
- 
 }
 /*==================================start navbar==============================*/
 /*start navbar*/
@@ -100,8 +107,8 @@ html::-webkit-scrollbar-track {
 .navbar {
   padding-top: 1rem;
   background-color: #ffffff8c;
-backdrop-filter: blur(11px);
-position: relative;
+  backdrop-filter: blur(11px);
+  position: relative;
 }
 .navbar::before {
   position: absolute;
@@ -110,12 +117,15 @@ position: relative;
   content: "";
   height: 506px;
   width: 500px;
-  background-image: url('../../../public/images/headNav.svg');
+  background-image: url("../../../public/images/headNav.svg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
-
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+}
 .navbar-toggler {
   border: 0 !important;
 }
@@ -222,12 +232,13 @@ position: relative;
   font-weight: 400;
   transition: 0.3s;
   background-color: var(--main_color);
-  padding: 18px 40px;
+  padding: 18px 40px !important;
   color: white;
   border-radius: 24px 0px 24px 24px;
 }
 .navbar-nav .nav-link:hover {
-  color: var(--main_color);
+  color: white;
+  background-color: var(--three_color);
 }
 
 .navbar-nav .nav-link.active {
@@ -402,6 +413,10 @@ li.nav-item.lang a.active {
   .navbar-nav {
     gap: 8px;
   }
+  .navbar::before {
+    height: 406px;
+    width: 400px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -412,7 +427,9 @@ li.nav-item.lang a.active {
     margin-bottom: 34px;
   }
 
-  .btn-lang {
+  .navbar::before {
+    height: 336px;
+    width: 330px;
   }
 
   .navbar-collapse {
@@ -468,12 +485,15 @@ li.nav-item.lang a.active {
   .navbar-nav .nav-link {
     font-size: 18px;
   }
+  .navbar-brand img {
+    height: 64px;
+  }
+  .navbar::before {
+    height: 260px;
+    width: 254px;
+  }
 }
 @media (max-width: 580px) {
-  .navbar-brand img {
-    width: 220px;
-  }
-
   .toggler-icon {
     width: 26px;
     height: 2px;
@@ -498,3 +518,38 @@ li.nav-item.lang a.active {
 }
 
 /*==================================end navbar==============================*/
+/*aboutUS*/
+.aboutUS{}
+.aboutUS h1{
+  color: var(--second_color);
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 55px;
+  font-family: "TajB";
+}
+.aboutUS .descriptions{
+  text-align: center;
+}
+.aboutUS .descriptions p{
+  font-size: 30px;
+  font-family: "TajL";
+line-height: 50px;
+margin-bottom: 6px;
+}
+.aboutUS .descriptions .dec1{
+  margin-bottom: 26px;
+}
+.aboutUS .descriptions .dec2{
+  margin-bottom: 26px;
+}
+@media (max-width: 768px) {
+  .aboutUS h1 {
+    margin-bottom: 38px;
+    font-size: 40px;
+}
+.aboutUS .descriptions p {
+  font-size: 22px;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+}

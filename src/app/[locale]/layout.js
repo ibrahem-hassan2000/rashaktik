@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import LayNav from "../../../components/LayNav";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import Script from "next/script";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,9 +21,12 @@ export default function RootLayout({ children, params }) {
       <body className={inter.className}>
       <NextIntlClientProvider locale={params.locale} messages={messages}>
       <LayNav/>
-        {children}
-      </NextIntlClientProvider>
+      <main>
+      {children}
+      </main>
        
+      </NextIntlClientProvider>
+      <Script src="/bootstrap.js" />
         </body>
     </html>
   );
