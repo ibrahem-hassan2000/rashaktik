@@ -7,7 +7,6 @@
 body {
   background: white;
   overflow-x: hidden;
-  height: 500vh;
 }
 @font-face {
   font-family: "TajL";
@@ -80,25 +79,39 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-track {
   background-color: transparent;
 }
-main{
+main {
   padding-top: 130px;
   position: relative;
 }
-
+.con {
+  padding: 0px 96px;
+  width: 100%;
+  margin: auto;
+  max-width: 2000px;
+}
 @media (max-width: 992px) {
   .p70 {
     padding: 40px 0px;
   }
   main {
     padding-top: 40px;
-}
+  }
+  .con {
+    padding: 0px 40px;
+  }
 }
 @media (max-width: 768px) {
   .p70 {
     padding: 30px 0px;
   }
+  .con {
+    padding: 0px 30px;
+  }
 }
 @media (max-width: 480px) {
+  .con {
+    padding: 0px 14px;
+  }
 }
 /*==================================start navbar==============================*/
 /*start navbar*/
@@ -121,6 +134,12 @@ main{
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  transition: 0.3s;
+}
+html[dir="ltr"] .navbar::before {
+  left: 0;
+  right: auto;
+  transform: rotateY(180deg);
 }
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-left: 0;
@@ -142,7 +161,7 @@ main{
 .toggler-icon {
   width: 30px;
   height: 3px;
-  background-color: var(--main_color);
+  background-color: var(--three_color);
   display: block;
   transition: all 0.2s;
 }
@@ -223,6 +242,7 @@ main{
   margin: 0;
 }
 .navbar-brand img {
+  height: 70px;
 }
 
 .navbar-nav .nav-link {
@@ -371,6 +391,10 @@ li.nav-item.lang a.active {
   font-family: "TajB";
   font-weight: 700;
 }
+li.nav-item.lang img {
+  width: 50px;
+  height: 50px;
+}
 @media (min-width: 500px) {
   .navbar .container {
     max-width: 1920px !important;
@@ -400,16 +424,22 @@ li.nav-item.lang a.active {
 }
 
 @media (max-width: 1400px) {
-  .navbar-brand img {
-    height: 70px;
+  .navbar::before {
+    position: absolute;
+    top: -140px;
+    right: 0;
+    content: "";
+    height: 506px;
+    width: 500px;
+    background-image: url(/_next/static/media/headNav.5c09f8a4.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transition: 0.3s;
   }
 }
 
 @media (max-width: 1200px) {
-  .navbar-brand img {
-    height: 70px;
-  }
-
   .navbar-nav {
     gap: 8px;
   }
@@ -428,10 +458,12 @@ li.nav-item.lang a.active {
   }
 
   .navbar::before {
-    height: 336px;
-    width: 330px;
+    height: 446px;
+    width: 440px;
   }
-
+  .navbar::before {
+    top: -230px;
+  }
   .navbar-collapse {
     background-color: var(--main_color);
     border-radius: 20px;
@@ -489,8 +521,11 @@ li.nav-item.lang a.active {
     height: 64px;
   }
   .navbar::before {
-    height: 260px;
-    width: 254px;
+    height: 324px;
+    width: 320px;
+  }
+  .navbar::before {
+    top: -160px;
   }
 }
 @media (max-width: 580px) {
@@ -519,37 +554,228 @@ li.nav-item.lang a.active {
 
 /*==================================end navbar==============================*/
 /*aboutUS*/
-.aboutUS{}
-.aboutUS h1{
+.aboutUS {
+}
+.aboutUS h1 {
   color: var(--second_color);
   text-align: center;
   margin-bottom: 100px;
   font-size: 55px;
   font-family: "TajB";
 }
-.aboutUS .descriptions{
+.aboutUS .descriptions {
   text-align: center;
+  max-width: 1000px;
+  margin: auto;
 }
-.aboutUS .descriptions p{
+.aboutUS .descriptions p {
   font-size: 30px;
   font-family: "TajL";
-line-height: 50px;
-margin-bottom: 6px;
+  line-height: 50px;
+  margin-bottom: 6px;
+  text-transform: capitalize;
 }
-.aboutUS .descriptions .dec1{
+.aboutUS .descriptions .dec1 {
   margin-bottom: 26px;
 }
-.aboutUS .descriptions .dec2{
+.aboutUS .descriptions .dec2 {
   margin-bottom: 26px;
 }
 @media (max-width: 768px) {
   .aboutUS h1 {
     margin-bottom: 38px;
     font-size: 40px;
+  }
+  .aboutUS .descriptions p {
+    font-size: 22px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
 }
-.aboutUS .descriptions p {
+/*footer*/
+footer {
+  background-color: var(--main_color);
+}
+footer .content {
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+footer .content .part1 {
+  max-width: 330px;
+}
+footer .content .part1 img {
+  margin-bottom: 14px;
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+footer .content .part1 h2 {
   font-size: 22px;
-  line-height: 36px;
-  margin-bottom: 10px;
+  color: white;
+  max-width: 400px;
+  font-family: "TajM";
+  line-height: 29px;
+}
+footer .content .links {
+  min-width: 490px;
+  padding: 70px 0px;
+}
+footer .content .links ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+footer .content .links ul li {
+}
+footer .content .links ul li a {
+  color: white;
+  font-size: 20px;
+  font-family: "TajB";
+  line-height: 29px;
+  transition: 0.4s;
+}
+footer .content .links ul li a:hover {
+  color: var(--second_color);
+}
+footer .content .follow {
+}
+footer .content .follow h3 {
+  color: white;
+  font-size: 20px;
+  font-family: "TajM";
+  line-height: 29px;
+  margin-bottom: 22px;
+}
+footer .content .follow ul {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+footer .content .follow ul li {
+}
+footer .content .follow ul li a {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+footer .content .follow ul li a:hover {
+  transform: translateY(-3px);
+}
+footer .content .follow ul li a svg {
+}
+footer .content .follow ul li a svg path {
+  transition: 0.4s;
+}
+footer .content .follow ul li a:hover svg path {
+  fill: var(--second_color);
+}
+footer .copy {
+  background-color: var(--second_color);
+  padding: 30px 10px;
+  text-align: center;
+}
+footer .copy h4 {
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-size: 14px;
+  font-family: "TajM";
+  line-height: 22px;
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+  letter-spacing: 1px;
+}
+footer .copy h4 a {
+  font-size: 14px;
+  font-family: "TajM";
+  line-height: 22px;
+  color: white;
+  transition: 0.5s;
+}
+footer .copy h4 a:hover {
+  color: var(--main_color);
+}
+footer .copy h4 svg {
+  margin: 0px 8px;
+  width: 24px;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  footer .content .links ul {
+    gap: 20px;
+  }
+  footer .content .links {
+    min-width: 400px;
+  }
+  footer .content .links ul li a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  footer .content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0px;
+  }
+  footer .content .links {
+    min-width: 100%;
+    padding: 10px 0px;
+  }
+  footer .content .part1 {
+    max-width: 500px;
+    margin: auto;
+  }
+  footer .content .part1 h2 {
+    max-width: 100%;
+    text-align: center;
+  }
+  footer .content .part1 img {
+    margin: 0px auto 10px;
+    max-width: 80%;
+  }
+  footer .content .follow h3 {
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  footer .copy {
+    padding: 14px 10px;
+  }
+}
+@media (max-width: 500px) {
+  footer .content .links ul {
+    gap: 13px;
+    flex-wrap: wrap;
+  }
+  footer .content .links ul li a {
+    font-size: 16px;
+  }
+  footer .content .part1 h2 {
+    font-size: 18px;
+    
+}
+footer .content .follow ul li a {
+  width: 34px;
+  height: 34px;
+}
+footer .content .follow h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+footer .content .part1 img {
+  width: 180px;
+ 
 }
 }
