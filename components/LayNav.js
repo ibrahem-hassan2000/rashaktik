@@ -54,9 +54,9 @@ function LayNav({ locale }) {
             <li className="nav-item">
               <Link
                 className={`nav-link ${
-                  pathname === "/contactUS" ? "active" : ""
+                  pathname === "/contactUs" ? "active" : ""
                 }`}
-                href="/contactUS"
+                href="/contactUs"
               >
                   {t('contact')}
               </Link>
