@@ -256,9 +256,8 @@ html[dir="ltr"] .navbar::before {
   color: white;
   border-radius: 24px 0px 24px 24px;
 }
-html[dir='ltr'] .navbar-nav .nav-link{
+html[dir="ltr"] .navbar-nav .nav-link {
   border-radius: 0px 24px 24px 24px;
-
 }
 .navbar-nav .nav-link:hover {
   color: white;
@@ -955,7 +954,7 @@ html[dir="ltr"] .contactUs .content .part2::after {
   }
   html[dir="ltr"] .contactUs .content .part2 {
     border-radius: 30px 0px 0px 30px;
-}
+  }
   .contactUs .content .part2 .contactUsForm .partInput label {
     font-size: 16px;
   }
@@ -979,5 +978,80 @@ html[dir="ltr"] .contactUs .content .part2::after {
   }
   .contactUs .content .part2::after {
     background-size: contain;
+  }
+}
+/*offer*/
+.offer {
+  padding: 70px 0px;
+}
+.offer .content {
+  height: auto;
+  padding: 20px;
+  min-height: 300px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("https://s3-alpha-sig.figma.com/img/8f9b/f866/024ded9473e3ee2c7b06c43caa480e8d?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pwCBXNgnHMp0qzbzlvsoKbvPr53mdCrxny8uuz5fB0O9AHQMGtvLakvkuWpvJhdqjm6VqtBO9QckJ8KpqT~pjWB77P1sECARN6jtw3dppwHgUWfdWI9dLeBzeP7gNzgUdGU7tOnBVaI3kJB5M48WxRy51Y2rLLHzgGGfFg2z22rnzxujw4ell4glTSzkOHYAsDjGh1VPKSaCH6BU4876YBIH7KiMvkR7N-KbLscAUAitvLcs9oFqSUkvg1zByRPSMvMvxa~kolq30e98S3dH5KhQJkc1gxPtwjvFaMVDnfuA8o7EQoKEjzynjZmAbf8cmeXugTBZEtsn8cdLi1vN5Q__");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.offer .content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #a879c6bf;
+  height: 100%;
+  width: 100%;
+}
+.offer .content .part {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+.offer .content h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: white;
+  font-family: "TajL";
+}
+.offer .content .partOffer {
+}
+.offer .content .partOffer h3 {
+  font-family: "TajB";
+  font-size: 36px;
+  color: white;
+  margin: 0;
+}
+.offer .content .partOffer h3 span {
+  font-family: "TajB";
+  font-size: 36px;
+  color: var(--second_color);
+}
+@media (max-width: 768px) {
+  .offer .content .part {
+    max-width: 90%;
+  }
+  .offer .content h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .offer .content .partOffer h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .offer .content .partOffer h3 span {
+    font-size: 24px;
+  }
+  .offer .content {
+    height: auto;
+    min-height: 223px;
+    padding: 16px ;
   }
 }
