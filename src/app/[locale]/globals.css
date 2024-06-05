@@ -256,6 +256,10 @@ html[dir="ltr"] .navbar::before {
   color: white;
   border-radius: 24px 0px 24px 24px;
 }
+html[dir='ltr'] .navbar-nav .nav-link{
+  border-radius: 0px 24px 24px 24px;
+
+}
 .navbar-nav .nav-link:hover {
   color: white;
   background-color: var(--three_color);

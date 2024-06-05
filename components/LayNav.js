@@ -13,7 +13,7 @@ function LayNav({ locale }) {
     <nav className="navbar  navbar-expand-lg ">
       <div className="container">
         <Link className="navbar-brand" href="/">
-          <img src="./images/logo.svg" alt="logo" />
+          <img src="/images/logo.svg" alt="logo" />
         </Link>
         <div className="navbar-toggler2">
           <button
