@@ -22,6 +22,32 @@ function SliderPackg() {
               depth: 10,
               modifier: 0,
             }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1.3,
+                spaceBetween: 6,
+              },
+              430: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+              },
+              600:{
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+              },
+              800: {
+                spaceBetween: 20,
+                slidesPerView: 3.1,
+              },
+              1200: {
+                spaceBetween: 30,
+                slidesPerView: 3.5,
+              },
+              1600: {
+                spaceBetween: 60,
+                slidesPerView: 4.5,
+              },
+            }}
             modules={[EffectCoverflow]}
             className="mySwiper"
           >

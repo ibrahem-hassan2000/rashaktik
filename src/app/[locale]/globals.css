@@ -1112,13 +1112,10 @@ html[dir="ltr"] .latestOffers .allOffers .part {
 
 .latestOffers .allOffers .swiper-slide:nth-of-type(odd) .part {
   background-color: var(--three_color);
-
 }
 .latestOffers .allOffers .swiper-slide:nth-of-type(even) .part {
   background-color: var(--second_color);
-
 }
-
 
 .latestOffers .allOffers .part.bestOffer .titleBest {
   background-color: white;
@@ -1210,14 +1207,93 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
 .latestOffers .allOffers .swiper-wrapper {
   align-items: center;
   min-height: 700px;
-
 }
-.latestOffers .allOffers .swiper-slide-active .part.bestOffer {
+.latestOffers .allOffers .swiper-slide-active .part {
   padding: 100px 36px;
 }
-.latestOffers .allOffers .swiper-slide-active .part{
+.latestOffers .allOffers .swiper-slide-active .part {
   background-color: var(--main_color) !important;
 }
-.latestOffers .allOffers .swiper-slide-active .part h2{
+.latestOffers .allOffers .swiper-slide-active .part h2 {
   color: white;
+}
+@media (max-width: 1200px) {
+  .latestOffers .allOffers .part h2 {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  .latestOffers .allOffers .part .price {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  .latestOffers .allOffers .part ul li {
+    padding-right: 30px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .latestOffers .allOffers .part ul li::before {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+  }
+  .latestOffers .allOffers .swiper-slide-active .part {
+    padding: 70px 28px;
+  }
+  .latestOffers .allOffers .part {
+    padding: 40px 32px 40px;
+    min-height: 400px;
+  }
+  .latestOffers .allOffers .swiper-wrapper {
+    min-height: 480px;
+  }
+  .latestOffers .allOffers {
+    padding: 42px 0px;
+  }
+  .latestOffers .titleOffer2 {
+    font-size: 46px;
+  }
+  .latestOffers .titleOffer {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .latestOffers .allOffers .part {
+    padding: 36px 26px 36px;
+    min-height: 380px;
+  }
+  .latestOffers .allOffers .part.bestOffer .titleBest p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .latestOffers .allOffers .part.bestOffer .titleBest {
+    padding: 8px;
+    height: 40px;
+    width: 207px;
+    top: 23px;
+    left: -65px;
+  }
+  .latestOffers .allOffers .part h2 {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .latestOffers .allOffers .part .price {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .latestOffers .allOffers .swiper-slide-active .part {
+    padding: 56px 26px;
+  }
+  .latestOffers .titleOffer {
+    font-size: 22px;
+  }
+  .latestOffers .titleOffer2 {
+    font-size: 32px;
+  }
+  .latestOffers .allOffers {
+    padding: 20px 0px 40px;
+  }
+  .latestOffers .allOffers .swiper-wrapper {
+    min-height: 450px;
+  }
 }
