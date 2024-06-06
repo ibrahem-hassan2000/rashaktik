@@ -1297,3 +1297,189 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
     min-height: 450px;
   }
 }
+/*map*/
+.pulse {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  position: absolute;
+  transform: translateX(50%);
+  left: 80px;
+  top: 50%;
+  z-index: 3;
+}
+html[dir="ltr"] .pulse {
+  left: 60%;
+}
+.ring {
+  position: absolute;
+  background: var(--purple, rgba(169, 123, 198, 0.37));
+
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  opacity: 0.8;
+  -webkit-animation: pulsing 5s 2s ease-out infinite;
+  animation: pulsing 5s 2s ease-out infinite;
+}
+.ring:nth-of-type(1) {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.ring:nth-of-type(2) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.ring:nth-of-type(3) {
+  -webkit-animation-delay: -1.5s;
+  animation-delay: -1.5s;
+}
+
+@-webkit-keyframes pulsing {
+  100% {
+    transform: scale(2.75);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsing {
+  100% {
+    transform: scale(2.75);
+    opacity: 0;
+  }
+}
+/*map*/
+.map {
+  padding: 74px 0px;
+}
+.map .content {
+  position: relative;
+  overflow: hidden;
+  height: 620px;
+}
+.map .content .imgMap {
+  width: 100%;
+  height: 100%;
+}
+.map .content .imgMap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.map .content .titleMap {
+  height: 240px;
+  padding: 54px 40px;
+  background-color: white;
+  border-radius: 74px 0px 74px 74px;
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  z-index: 2;
+  max-width: 80%;
+  width: 744px;
+}
+.map .content .titleMap h2 {
+  color: var(--three_color);
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 24px;
+  font-family: "TajB";
+}
+.map .content .titleMap p {
+  color: black;
+  font-family: "TajL";
+  font-size: 30px;
+  line-height: 44px;
+}
+.map .content .pulse {
+}
+.map .content .pulse::before {
+  background-image: url("../../../public//images/map.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 20px;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.map .content .pulse .ring {
+}
+@media (max-width: 1400px) {
+  .map .con {
+    padding: 0px 50px;
+  }
+  .map .content {
+    height: 450px;
+  }
+  .map .content .titleMap h2 {
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 14px;
+  }
+  .map .content .titleMap p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .map .content .titleMap {
+    height: 180px;
+    padding: 34px 30px;
+
+    border-radius: 40px 0px 40px 40px;
+
+    top: 60px;
+  }
+}
+@media (max-width: 992px) {
+  .map .content .titleMap {
+    height: 150px;
+    padding: 22px 22px;
+    border-radius: 30px 0px 30px 30px;
+    top: 30px;
+  }
+  .map .content .titleMap h2 {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 6px;
+  }
+  .map .content .titleMap p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .pulse {
+    left: 40px;
+    top: 60%;
+  }
+  .map .content {
+    height: 340px;
+  }
+}
+@media (max-width: 560px) {
+  .map .con {
+    padding: 0px 0px;
+  }
+  .map .content .titleMap p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .map .content .titleMap h2 {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  .map .content .titleMap {
+    height: 120px;
+    padding: 18px 18px;
+    border-radius: 30px 0px 30px 30px;
+    top: 20px;
+  }
+  .map .content {
+    height: 250px;
+  }
+  .pulse {
+    left: 30px;
+    top: 60%;
+  }
+}
