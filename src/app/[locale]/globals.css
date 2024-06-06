@@ -1056,7 +1056,7 @@ html[dir="ltr"] .contactUs .content .part2::after {
   }
   .offer {
     padding: 40px 0px;
-}
+  }
 }
 @media (max-width: 430px) {
   .offer .content h2 {
@@ -1067,5 +1067,157 @@ html[dir="ltr"] .contactUs .content .part2::after {
   }
   .offer .content {
     min-height: 200px;
+  }
 }
+/*latestOffers*/
+.latestOffers {
+}
+.latestOffers .titleOffer {
+  text-align: center;
+  padding: 0px 10px;
+  font-size: 26px;
+  color: var(--second_color);
+  font-family: "TajM";
+  margin-bottom: 16px;
+}
+.latestOffers .titleOffer2 {
+  text-align: center;
+  padding: 0px 10px;
+  font-size: 56px;
+  color: var(--main_color);
+  font-family: "TajB";
+  margin-bottom: 0px;
+}
+.latestOffers .allOffers {
+  padding: 56px 0px;
+  max-width: 2000px;
+  margin: auto;
+  overflow: hidden;
+}
+.latestOffers .allOffers .part {
+  padding: 32px 32px 86px;
+  border-radius: 16px;
+  color: white;
+  background-color: var(--second_color);
+  max-width: 354px;
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+  min-height: 530px;
+  transition: 0.5s;
+}
+html[dir="ltr"] .latestOffers .allOffers .part {
+  direction: ltr;
+}
+
+.latestOffers .allOffers .swiper-slide:nth-of-type(odd) .part {
+  background-color: var(--three_color);
+
+}
+.latestOffers .allOffers .swiper-slide:nth-of-type(even) .part {
+  background-color: var(--second_color);
+
+}
+
+
+.latestOffers .allOffers .part.bestOffer .titleBest {
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 208px;
+  transform: rotate(-45deg);
+  top: 26px;
+  left: -50px;
+  position: absolute;
+}
+.latestOffers .allOffers .part.bestOffer .titleBest p {
+  color: var(--second_color);
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  font-family: "TajB";
+}
+html[dir="ltr"] .latestOffers .allOffers .part.bestOffer .titleBest {
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+}
+.latestOffers .allOffers .part h2 {
+  color: var(--main_color);
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-family: "TajB";
+}
+
+.latestOffers .allOffers .part.bestOffer h2 {
+  color: white;
+}
+.latestOffers .allOffers .part .price {
+  color: white;
+  margin-bottom: 32px;
+  font-size: 56px;
+  font-family: "TajB";
+  margin-bottom: 32px;
+}
+.latestOffers .allOffers .part ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.latestOffers .allOffers .part ul li {
+  padding-right: 40px;
+  font-family: "TajL";
+  font-size: 17px;
+  line-height: 24px;
+  position: relative;
+}
+html[dir="ltr"] .latestOffers .allOffers .part ul li {
+  padding-right: 0px;
+  padding-left: 40px;
+}
+.latestOffers .allOffers .part ul li::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url("../../../public/images/true.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  right: 0;
+  top: 2px;
+}
+html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
+  right: auto;
+  left: 0;
+}
+.latestOffers .allOffers .slick-slide {
+  margin: 0px 30px;
+}
+.latestOffers .allOffers .swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: flex;
+  justify-content: center;
+}
+.latestOffers .allOffers .swiper-wrapper {
+  align-items: center;
+  min-height: 700px;
+
+}
+.latestOffers .allOffers .swiper-slide-active .part.bestOffer {
+  padding: 100px 36px;
+}
+.latestOffers .allOffers .swiper-slide-active .part{
+  background-color: var(--main_color) !important;
+}
+.latestOffers .allOffers .swiper-slide-active .part h2{
+  color: white;
 }
