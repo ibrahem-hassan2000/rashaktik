@@ -1,4 +1,4 @@
-
+import { Inter } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'swiper/css';
@@ -9,6 +9,8 @@ import LayNav from "../../../components/LayNav";
 import LayFooter from "../../../components/LayFooter";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Script from "next/script";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Rashaktik",
