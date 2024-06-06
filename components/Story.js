@@ -20,7 +20,7 @@ function Story() {
                 المحتوى المقروء للصفحة عند النظر إلى تخطيطها. نقطة استخدام لوريم
                 إيبسوم.
               </p>
-              <img src="" alt="" />
+             {/*<img src="" alt="" />*/ } 
             </div>
           </div>
           <div className="part2">

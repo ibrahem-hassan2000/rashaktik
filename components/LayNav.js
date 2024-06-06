@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Link, usePathname } from "../src/navigation";
-
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -13,7 +12,7 @@ function LayNav({ locale }) {
     <nav className="navbar  navbar-expand-lg ">
       <div className="container">
         <Link className="navbar-brand" href="/">
-          <img src="/images/logo.svg" alt="logo" />
+          <Image  width={174} height={74}  src="/images/logo.svg" alt="logo" />
         </Link>
         <div className="navbar-toggler2">
           <button

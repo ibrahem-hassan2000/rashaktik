@@ -1,3 +1,4 @@
+
 import { useTranslations } from "next-intl";
 import React from "react";
 
@@ -11,7 +12,7 @@ function page() {
           <p>{t("dec1")}</p>
           <p>{t("dec2")}</p>
         </div>
-        <div className="dec1">
+        <div className="dec1">  
           <p>{t("dec3")}</p>
           <p>{t("dec4")}</p>
           <p>{t("dec5")}</p>

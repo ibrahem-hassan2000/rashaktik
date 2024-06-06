@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Map() {
@@ -6,7 +7,7 @@ function Map() {
         <div className='con'> 
         <div className='content'>
             <div className='imgMap'>
-                <img src='/images/Basemap.png' alt='map'/>
+                <Image  height={620} width={1720} src='/images/Basemap.png' alt='map'/>
             </div>
             <div className='titleMap'>
                 <h2>موقعنا</h2>
