@@ -1,9 +1,22 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper/modules";
 
 function Programs() {
+  const swiperRef = useRef(null);
+
+  const goNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const goPrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
   return (
     <section className="programs">
       <div className="con">
@@ -13,14 +26,17 @@ function Programs() {
               <h2>البرامج</h2>
               <h3>أكتشف برامجنا</h3>
             </div>
-            <div className="arrwo"></div>
+            <div className="arrwo ">
+        <button className="swiper-button-prev" onClick={goPrev}></button>
+        <button className="swiper-button-next" onClick={goNext}></button>
+      </div>
           </div>
           <div className="part2">
             <Swiper
+            ref={swiperRef}
               slidesPerView={"auto"}
               spaceBetween={30}
-             
-              navigation={true}
+              navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }} 
               modules={[Navigation]}
               className="mySwiper"
             >
