@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function Story() {
@@ -8,7 +9,7 @@ function Story() {
           <div className="part1">
             <span>مرحبا</span>
             <h2>القصة وراء مركزنا</h2>
-            <p>
+            <p className="pStory">
               إنها حقيقة مثبتة منذ زمن طويل أن القارئ سوف يصرف انتباهه من خلال
               المحتوى المقروء للصفحة عند النظر إلى تخطيطها. نقطة استخدام لوريم
               إيبسوم.
@@ -20,7 +21,7 @@ function Story() {
                 المحتوى المقروء للصفحة عند النظر إلى تخطيطها. نقطة استخدام لوريم
                 إيبسوم.
               </p>
-             {/*<img src="" alt="" />*/ } 
+             <Image width={612} height={224} src="/images/story1.png" alt="story1" />
             </div>
           </div>
           <div className="part2">

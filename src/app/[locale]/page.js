@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import Offer from "../../../components/Offer";
 import SliderPackg from "../../../components/SliderPackg";
 import Map from "../../../components/Map";
+import Story from "../../../components/Story";
 
 export default function Home() {
  
@@ -11,6 +12,7 @@ export default function Home() {
   <Offer/>
   <SliderPackg/>
   <Map/>
+  <Story/>
   </>
   );
 }

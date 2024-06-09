@@ -1482,4 +1482,193 @@ html[dir="ltr"] .pulse {
     left: 30px;
     top: 60%;
   }
+  .map {
+    padding: 44px 0px;
+}
+}
+/*story*/
+.story {
+  padding: 74px 0px;
+}
+.story .content {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.story .content .part1 {
+  flex: 1;
+  max-width: calc(50% - 40px);
+}
+.story .content .part1 span {
+  color: var(--three_color);
+  font-size: 26px;
+  font-family: "TajM";
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+.story .content .part1 h2 {
+  font-family: "TajB";
+  color: var(--main_color);
+  font-size: 56px;
+  margin-bottom: 30px;
+  line-height: 68px;
+}
+.story .content .part1 .pStory {
+  color: hsla(240, 2%, 16%, 0.75);
+  font-size: 20px;
+  font-family: "TajM";
+  line-height: 30px;
+  margin-bottom: 66px;
+}
+.story .content .part1 .box1 {
+  background-color: var(--second_color);
+}
+.story .content .part1 .box1 img {
+  max-width: 100%;
+  min-height: 180px;
+  object-fit: cover;
+  width: 100%;
+  max-height: 250px;
+  margin-top: 30px;
+}
+.story .content .box {
+  padding: 56px;
+  border-radius: 24px;
+  color: white;
+  position: relative;
+}
+.story .content .box h3 {
+  color: white;
+  font-family: "TajB";
+  font-size: 32px;
+  margin: 0;
+}
+.story .content .box p {
+  color: white;
+  font-family: "TajM";
+  font-size: 20px;
+  margin-top: 12px;
+}
+.story .content .part2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: calc(50% - 40px);
+
+}
+.story .content .part2 .box {
+}
+.story .content .part2 .box2 {
+  min-height: 460px;
+  background-image: url("../../../public/images/story2.jpg");
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.story .content .part2 .box2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(169, 123, 198, 0.76);
+}
+.story .content .part2 .box2 h3 {
+  position: relative;
+}
+.story .content .part2 .box2 p {
+  position: relative;
+}
+.story .content .part2 .box3 {
+  background-color: var(--three_color);
+}
+.story .content .part2 .box3 h3 {
+}
+.story .content .part2 .box3 p {
+}
+@media(max-width:1200px){
+  .story .content {
+   
+    gap: 30px;
+}
+.story .content .part1 span {
+  font-size: 22px;
+  margin-bottom: 11px;
+}
+.story .content .part1 h2 {
+
+  font-size: 44px;
+  margin-bottom: 14px;
+  line-height: 54px;
+}
+.story .content .part1 .pStory {
+ 
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+.story .content .box {
+  padding: 40px;
+  border-radius: 20px;
+}
+.story .content .part2 ,.story .content .part1 {
+  max-width: calc(50% - 15px);
+}
+}
+@media(max-width:992px){
+  .story .content {
+  
+    flex-direction: column;
+}
+.story .content .part2 {
+ 
+  gap: 30px;
+}
+.story .content .part2 ,.story .content .part1 {
+  max-width: 100%;
+}
+.story .content .part2 .box2 {
+  min-height: 380px;
+}
+}
+@media(max-width:600px){
+  .story .content .part1 h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    line-height: 40px;
+}
+.story .content .part1 span {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.story .content .part1 .pStory {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 26px;
+}
+.story .content .box h3 {
+  font-size: 24px;
+}
+.story .content .box p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+.story .content .part1 .box1 img {
+ 
+  margin-top: 20px;
+}
+.story .content .part2 .box2 {
+  min-height: 270px;
+}
+.story .content .box {
+  padding: 28px;
+  border-radius: 20px;
+}
+.story {
+  padding: 44px 0px;
+}
 }
