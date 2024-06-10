@@ -1728,7 +1728,7 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
   font-size: 26px;
   transform: rotate(180deg);
 }
-html[dir='ltr'] .programs .content .part1 .arrwo button::after{
+html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   transform: none;
 }
 .programs .content .part2 {
@@ -1845,7 +1845,7 @@ html[dir='ltr'] .programs .content .part1 .arrwo button::after{
   }
   .programs .content .part1 {
     margin-bottom: 0px;
-    gap:10px 30px;
+    gap: 10px 30px;
   }
   .programs .content .part1 .arrwo button {
     width: 40px;
@@ -1879,24 +1879,147 @@ html[dir='ltr'] .programs .content .part1 .arrwo button::after{
     height: 40px;
     gap: 14px;
   }
-
 }
 @media (max-width: 500px) {
-
-.programs .content .part2 .box {
+  .programs .content .part2 .box {
     width: 95%;
+  }
+  .programs .content .part2 .box h2 {
+    text-wrap: wrap;
+    min-width: 100%;
+  }
+  .programs .content .part1 .Titles h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .programs .content .part1 .Titles h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+    line-height: 22px;
+  }
 }
-.programs .content .part2 .box h2 {
- text-wrap:wrap;
-  min-width: 100%;
+/*hoursWork*/
+.hoursWork {
+  margin: 74px 0px;
 }
-.programs .content .part1 .Titles h3 {
-  font-size: 24px;
-  line-height: 32px;
+.hoursWork .content {
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  min-height: auto;
+  height: 550px;
+  width: 100%;
 }
-.programs .content .part1 .Titles h2 {
-  font-size: 18px;
-  margin-bottom: 4px;
-  line-height: 22px;
+.hoursWork .content .partImg {
+  flex: 1;
+  width: calc(100% / 3);
+  height: 100%;
 }
+.hoursWork .content .partImg img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hoursWork .content .partInfo {
+  width: calc(100% / 3);
+  flex: 1;
+  background-color: var(--main_color);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 70px 60px;
+}
+.hoursWork .content .partInfo img {
+  display: block;
+  margin: 0px auto 14px;
+  width: 110px;
+  height: 110px;
+  aspect-ratio: 1/1;
+  max-width: 24%;
+}
+.hoursWork .content .partInfo .hoursTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.hoursWork .content .partInfo .hoursTitle span {
+  display: block;
+  height: 2px;
+  width: 108px;
+  background-color: white;
+  margin-top: 8px;
+}
+.hoursWork .content .partInfo .hoursTitle h2 {
+  flex-wrap: nowrap;
+  width: fit-content;
+  min-width: fit-content;
+  text-align: center;
+  color: white;
+  font-size: 34px;
+  line-height: 40px;
+  margin: 0;
+  font-family: "TajB";
+}
+.hoursWork .content .partInfo .hoursDetils {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.hoursWork .content .partInfo p {
+  font-size: 28px;
+  line-height: 34px;
+  color: white;
+  text-align: center;
+  font-family: "TajL";
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .hoursWork .content .partInfo .hoursTitle h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .hoursWork .content .partInfo p {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .hoursWork .content .partInfo .hoursDetils {
+    gap: 10px;
+  }
+  .hoursWork .content .partInfo .hoursTitle span {
+    display: block;
+    height: 2px;
+    width: 66px;
+    background-color: white;
+    margin-top: 8px;
+  }
+  .hoursWork .content .partInfo {
+    gap: 24px;
+    padding: 40px 40px;
+  }
+  .hoursWork .content {
+    height: 400px;
+  }
+}
+@media (max-width: 992px) {
+  .hoursWork .content {
+    height: auto;
+    flex-direction: column;
+  }
+  .hoursWork .content .partImg {
+    width: 100%;
+  }
+  .hoursWork .content .partInfo {
+    width: 100%;
+  }
+  .hoursWork .content .partImg img {
+    width: 100%;
+    height: 500px;
+    object-position: top;
+  }
 }
