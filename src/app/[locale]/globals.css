@@ -1671,12 +1671,15 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
 .programs .content {
 }
 .programs .content .part1 {
-  margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 10px 50px;
   flex-wrap: wrap;
+}
+.programs .swiper-wrapper {
+  margin-top: 50px;
+  margin-inline: 8px;
 }
 .programs .content .part1 .Titles {
   width: fit-content;
@@ -1698,6 +1701,12 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
 }
 .programs .content .part1 .arrwo {
   position: relative;
+  width: 196px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 .programs .content .part1 .arrwo button {
   background-color: transparent;
@@ -1708,18 +1717,19 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
   border-radius: 50%;
   width: 76px;
   height: 76px;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: 0;
+  transform: none;
+  position: relative;
 }
 .programs .content .part1 .arrwo button::after {
   font-size: 26px;
   transform: rotate(180deg);
 }
-.programs .content .part1 .arrwo button.swiper-button-prev {
-  left: 116px;
-  right: auto;
-}
-.programs .content .part1 .arrwo button.swiper-button-next {
-  left: 0px;
-  right: auto;
+html[dir='ltr'] .programs .content .part1 .arrwo button::after{
+  transform: none;
 }
 .programs .content .part2 {
   display: flex;
@@ -1795,33 +1805,32 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
     font-size: 18px;
   }
   .programs .content .part1 {
-    margin-bottom: 30px;
-    gap: 30px;
+    gap: 10px 30px;
+  }
+  .programs .swiper-wrapper {
+    margin-top: 30px;
   }
   .programs .content .part2 .box svg {
     height: 46px;
-    
-    max-width: 50px;
-   
-    margin-bottom: 26px;
-}
-.programs .content .part2 .box h2 {
 
-  font-size: 26px;
- 
-  line-height: 34px;
-  
-}
-.programs .content .part2 .box p {
- 
-  line-height: 30px;
-  font-size: 18px;
- 
-}
-.programs .content .part1 .arrwo button.swiper-button-prev {
-  left: 80px;
-  right: auto;
-}
+    max-width: 50px;
+
+    margin-bottom: 26px;
+  }
+  .programs .content .part2 .box h2 {
+    font-size: 26px;
+
+    line-height: 34px;
+  }
+  .programs .content .part2 .box p {
+    line-height: 30px;
+    font-size: 18px;
+  }
+  .programs .content .part1 .arrwo {
+    width: 134px;
+    height: 56px;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1833,41 +1842,61 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
   .programs .content .part1 .Titles h3 {
     font-size: 30px;
     line-height: 40px;
+  }
+  .programs .content .part1 {
+    margin-bottom: 0px;
+    gap:10px 30px;
+  }
+  .programs .content .part1 .arrwo button {
+    width: 40px;
+    height: 40px;
+  }
+  .programs .content .part1 .arrwo button::after {
+    font-size: 12px;
+  }
+
+  .programs .swiper-wrapper {
+    margin: 20px 12px;
+  }
+  .programs .content .part2 .box {
+    padding: 26px 22px;
+  }
+  .programs .content .part2 .box svg {
+    height: 38px;
+    max-width: 42px;
+    margin-bottom: 12px;
+  }
+  .programs .content .part2 .box h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .programs .content .part2 .box p {
+    line-height: 22px;
+    font-size: 16px;
+  }
+  .programs .content .part1 .arrwo {
+    width: 94px;
+    height: 40px;
+    gap: 14px;
+  }
+
 }
-.programs .content .part1 {
-  margin-bottom: 0px;
-  gap: 30px;
-} 
-.programs .content .part1 .arrwo button {
-  width: 40px;
-  height: 40px;
-}
-.programs .content .part1 .arrwo button::after {
-  font-size: 12px;
-}
-.programs .content .part1 .arrwo button.swiper-button-prev {
-  left: 54px;
-  right: auto;
-}   
-.programs  .swiper-wrapper {
- 
-  margin: 20px 12px;
-}
+@media (max-width: 500px) {
+
 .programs .content .part2 .box {
-  padding: 26px 22px;
- 
-}
-.programs .content .part2 .box svg {
-  height: 38px;
-  max-width: 42px;
-  margin-bottom: 12px;
+    width: 95%;
 }
 .programs .content .part2 .box h2 {
-  font-size: 20px;
-  line-height: 30px;
+ text-wrap:wrap;
+  min-width: 100%;
 }
-.programs .content .part2 .box p {
+.programs .content .part1 .Titles h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.programs .content .part1 .Titles h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
   line-height: 22px;
-  font-size: 16px;
 }
 }

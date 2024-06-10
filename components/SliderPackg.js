@@ -11,7 +11,9 @@ function SliderPackg() {
         <h3 className="titleOffer2">أحدث العروض</h3>
         <div className="allOffers">
           <Swiper
+          
             slidesPerView={5}
+
             spaceBetween={70}
             centeredSlides={true}
             loop={true}

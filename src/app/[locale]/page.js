@@ -5,13 +5,12 @@ import Map from "../../../components/Map";
 import Story from "../../../components/Story";
 import Programs from "../../../components/Programs";
 
-export default function Home() {
- 
+export default function Home({params}) {
   const t =useTranslations("home.about")
   return (
   <>
   <div style={{height:400}}></div>
-  <Programs/>
+  <Programs locale={params.locale}/>
   <Offer/>
   <SliderPackg/>
   <Map/>

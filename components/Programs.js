@@ -1,17 +1,15 @@
 "use client";
 import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-function Programs() {
+function Programs({locale}) {
   const swiperRef = useRef(null);
-
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
   };
-
   const goPrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
@@ -27,17 +25,34 @@ function Programs() {
               <h3>أكتشف برامجنا</h3>
             </div>
             <div className="arrwo ">
-        <button className="swiper-button-prev" onClick={goPrev}></button>
-        <button className="swiper-button-next" onClick={goNext}></button>
-      </div>
+              <button className="swiper-button-prev" onClick={goPrev}></button>
+              <button className="swiper-button-next" onClick={goNext}></button>
+            </div>
           </div>
           <div className="part2">
             <Swiper
-            ref={swiperRef}
-              slidesPerView={"auto"}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              dir={locale==='en'?'ltr':'rtl'}
+              slidesPerView={'auto'}
+              slidesPerGroup={1}
               spaceBetween={30}
-              navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }} 
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
               modules={[Navigation]}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  spaceBetween: 6,
+                },
+                500: {
+                  slidesPerView: 'auto',
+                  spaceBetween: 10,
+                },
+              }}
               className="mySwiper"
             >
               <SwiperSlide>
@@ -55,7 +70,7 @@ function Programs() {
                       fill="#B6DD6A"
                     />
                   </svg>
-                  <h2> اكتساب العضلات</h2>
+                  <h2> 1 اكتساب العضلات</h2>
                   <p>
                     إنها حقيقة مثبتة منذ زمن طويل أن القارئ سوف يصرف انتباهه
                   </p>
@@ -87,7 +102,7 @@ function Programs() {
                       fill="#B6DD6A"
                     />
                   </svg>
-                  <h2> فقدان الدهون </h2>
+                  <h2>2 فقدان الدهون </h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                     venenatis, nunc a pretium viverra.
@@ -109,9 +124,11 @@ function Programs() {
                       fill="#B6DD6A"
                     />
                   </svg>
-                  <h2> دروس اللياقة البدنية الجماعية </h2>
+                  <h2> 3 دروس اللياقة البدنية الجماعية </h2>
                   <p>
-                  تقدم برامج للسيدات اللياقة البدنية الجماعية مثل الزومبا، ولياقة الرقص، والكيك بوكسينغ، ودروس الدوران، والتدريب على الحلبة، مما يوفر جوًا ممتعًا وحيويًا للتمرينات.
+                    تقدم برامج للسيدات اللياقة البدنية الجماعية مثل الزومبا،
+                    ولياقة الرقص، والكيك بوكسينغ، ودروس الدوران، والتدريب على
+                    الحلبة، مما يوفر جوًا ممتعًا وحيويًا للتمرينات.
                   </p>
                 </div>
               </SwiperSlide>
@@ -141,7 +158,7 @@ function Programs() {
                       fill="#B6DD6A"
                     />
                   </svg>
-                  <h2> فقدان الدهون </h2>
+                  <h2>4 فقدان الدهون </h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                     venenatis, nunc a pretium viverra.
@@ -163,7 +180,7 @@ function Programs() {
                       fill="#B6DD6A"
                     />
                   </svg>
-                  <h2> اكتساب العضلات</h2>
+                  <h2>5 اكتساب العضلات</h2>
                   <p>
                     إنها حقيقة مثبتة منذ زمن طويل أن القارئ سوف يصرف انتباهه
                   </p>
@@ -195,7 +212,7 @@ function Programs() {
                       fill="#B6DD6A"
                     />
                   </svg>
-                  <h2> فقدان الدهون </h2>
+                  <h2>6 فقدان الدهون </h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                     venenatis, nunc a pretium viverra.
