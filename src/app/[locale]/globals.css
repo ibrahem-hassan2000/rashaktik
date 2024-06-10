@@ -2023,3 +2023,34 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
     object-position: top;
   }
 }
+@media (max-width: 768px) {
+  .hoursWork .content {
+    height: auto;
+    flex-direction: column;
+  }
+  .hoursWork .content .partImg img {
+    height: auto;
+    max-height: 380px;
+    aspect-ratio: 1 / 1;
+} 
+.hoursWork .content .partInfo {
+  gap: 12px;
+  padding: 30px 20px;
+} 
+.hoursWork .content .partInfo img {
+ 
+  margin: 0px auto 8px;
+  width: 70px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-width: 20%;
+}
+.hoursWork .content .partInfo .hoursTitle h2 {
+  font-size: 22px;
+  line-height: 36px;
+}
+.hoursWork .content .partInfo p {
+  font-size: 18px;
+  line-height: 26px;
+}
+}
