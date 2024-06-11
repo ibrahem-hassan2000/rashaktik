@@ -3,7 +3,7 @@ import React from "react";
 
 function HoursWork() {
   return (
-    <section className="hoursWork">
+    <section className="hoursWork" id="hoursWork">
       <div className="content">
         <div className="partImg">
             <Image src={'/images/lifestyle1.png'} height={550} width={634} alt="lifestyle"/>

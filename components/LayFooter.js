@@ -1,36 +1,44 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { Link } from "../src/navigation";
+import { useTranslations } from "next-intl";
 
 function LayFooter() {
+  const t = useTranslations("home.footer");
   return (
     <footer>
       <div className="con">
         <div className="content">
           <div className="part1">
-           <Link href={'/'}>
-           <Image width={348} height={150} src="/images/logo.svg" alt="logo" />
-           </Link>
-            <h2>هدفنا هو توفير تدريب عالي المستوى في بيئة ودية</h2>
+            <Link href={"/"}>
+              <Image
+                width={348}
+                height={150}
+                src="/images/logo.svg"
+                alt="logo"
+              />
+            </Link>
+            <h2>{t("title")}</h2>
           </div>
           <div className="links">
             <ul>
               <li>
-                <a href="#">ساعات العمل</a>
+                <Link href="/#hoursWork">{t("hour")} </Link>
               </li>
               <li>
-                <a href="#">البرامج </a>
+                <Link href="/#programs">{t("program")} </Link>
               </li>
               <li>
-                <a href="#">العروض </a>
+                <Link href="/#latestOffers">{t("offer")} </Link>
               </li>
               <li>
-                <a href="#">العروض </a>
+                <Link href="/#map">{t("map")} </Link>
               </li>
             </ul>
           </div>
           <div className="follow">
-            <h3>تابعونا</h3>
+            <h3>{t("follow")}</h3>
             <ul>
               <li>
                 <a href="#">
@@ -116,8 +124,8 @@ function LayFooter() {
               fill="white"
             />
           </svg>
-          ٢٠٢٣ مركز رشاقتك النسائي | تم التطوير بواسطه{" "}
-          <a href="#">شركه حياه تكنوليجي</a>
+          {t("copy1")}
+          <a href="#">{t("copy2")}</a>
         </h4>
       </div>
     </footer>

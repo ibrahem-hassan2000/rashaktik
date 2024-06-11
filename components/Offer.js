@@ -2,7 +2,7 @@ import React from "react";
 
 function Offer() {
   return (
-    <section className="offer">
+    <section className="offer" id="offer">
       <div className="con">
         <div className="content">
           <div className="part">

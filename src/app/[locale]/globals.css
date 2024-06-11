@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "TajM";
+  text-transform: capitalize;
 }
 body {
   background: white;
@@ -936,7 +937,8 @@ html[dir="ltr"] .contactUs .content .part2::after {
   .contactUs .content .part1 {
     margin: 0 !important;
     padding: 0px 10px;
-    min-width: 100%;
+   max-width: 60%;
+   min-width: auto;
   }
   .contactUs .content .part2 {
     padding: 36px 61px 36px 36px;
@@ -948,6 +950,13 @@ html[dir="ltr"] .contactUs .content .part2::after {
     margin: 30px auto 70px;
     padding-top: 40px;
   }
+}
+@media (max-width: 768px) {
+  .contactUs .content .part1 {
+ 
+    max-width:100%;
+    min-width: 100%;
+   }
 }
 @media (max-width: 600px) {
   .contactUs .content .part1 p {
@@ -992,6 +1001,7 @@ html[dir="ltr"] .contactUs .content .part2::after {
   .contactUs .content .part2::after {
     background-size: contain;
   }
+
 }
 /*offer*/
 .offer {

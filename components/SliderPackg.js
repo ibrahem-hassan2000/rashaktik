@@ -6,7 +6,7 @@ import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 function SliderPackg() {
   return (
     <>
-      <div className="latestOffers">
+      <div className="latestOffers" id="latestOffers">
         <h2 className="titleOffer">العروض</h2>
         <h3 className="titleOffer2">أحدث العروض</h3>
         <div className="allOffers">

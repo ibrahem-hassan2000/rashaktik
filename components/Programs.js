@@ -16,7 +16,7 @@ function Programs({locale}) {
     }
   };
   return (
-    <section className="programs">
+    <section className="programs" id="programs">
       <div className="con">
         <div className="content">
           <div className="part1">

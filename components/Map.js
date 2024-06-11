@@ -1,17 +1,21 @@
+"use client";
+import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import React from 'react'
 
 function Map() {
+  const t = useTranslations("home.map");
+
   return (
-    <section className='map'>
+    <section className='map' id='map'>
         <div className='con'> 
         <div className='content'>
             <div className='imgMap'>
                 <Image  height={620} width={1720} src='/images/Basemap.png' alt='map'/>
             </div>
             <div className='titleMap'>
-                <h2>موقعنا</h2>
-                <p>50, Afif 17532, Saudi Arabia, المملكة العربية السعودية</p>
+                <h2>{t("title")}</h2>
+                <p>{t("locationDec")} </p>
             </div>
             <div className="pulse">
             <div className="ring"></div>
