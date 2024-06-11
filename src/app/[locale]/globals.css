@@ -2087,6 +2087,7 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
 }
 .header .content .part1 img{
   max-width: 100%;
+  height: auto;
 }
 .header .content .part2 {
   align-self: flex-end;
