@@ -6,7 +6,7 @@ function HeaderPage() {
     <section className="header">
       <div className="content">
         <div className="part1">
-            <img src="/images/hero_design.svg"/>
+            <Image width={1086} height={1030} src="/images/hero_design.svg"/>
         </div>
         <div className="part2">
           <span className="spanOne">أبدأي ببناء جسمك</span>
