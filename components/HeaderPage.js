@@ -5,7 +5,9 @@ function HeaderPage() {
   return (
     <section className="header">
       <div className="content">
-        <div className="part1"></div>
+        <div className="part1">
+            <img src="/images/hero_design.svg"/>
+        </div>
         <div className="part2">
           <span className="spanOne">أبدأي ببناء جسمك</span>
           <h1>

@@ -8,8 +8,9 @@ import { useTranslations } from "next-intl";
 function LayNav({ locale }) {
   const t =useTranslations("home.nav")
   const pathname = usePathname();
+
   return (
-    <nav className="navbar  navbar-expand-lg ">
+    <nav className={`navbar  navbar-expand-lg ${pathname.split('').length>1?'have':''}`}>
       <div className="container">
         <Link className="navbar-brand" href="/">
           <Image  width={174} height={74}  src="/images/logo.svg" alt="logo" />

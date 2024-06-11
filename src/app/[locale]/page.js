@@ -11,7 +11,6 @@ export default function Home({params}) {
   const t =useTranslations("home.about")
   return (
   <>
-  <div style={{height:400}}></div>
   <HeaderPage/>
   <HoursWork/>
   <Programs locale={params.locale}/>
