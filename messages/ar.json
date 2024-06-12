@@ -37,6 +37,17 @@
     "map":{
       "title":"موقعنا",
       "locationDec":"50, Afif 17532, Saudi Arabia, المملكة العربية السعودية"
+    },
+    "offer":{
+      "title1":"العروض",
+      "title2":"أحدث العروض",
+      "bestOffer":"أفضل العروض",
+      "discountTitle":"عززي تجربتك من خلال نصائح التغذية الصحية والدعم المستمر والنشاط الاجتماعي",
+      "discountDec":"أشتركي الان واستمتعي بخصم يصل حتي "
+    },
+    "program":{
+      "programTitle":"البرامج",
+      "programDec":"أكتشف برامجنا"
     }
   },
   "contactUS":{

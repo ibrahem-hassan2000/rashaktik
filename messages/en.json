@@ -23,33 +23,43 @@
       "copy1": " 2023 Women's Fitness Center | Developed by",
       "copy2": "Hayat Technology Company"
     },
-    "story":{
-      "title1":"Hello",
-      "title2":"The story behind our center",
-      "title3":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
-      "storyTitle":"story",
-      "storyDec":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
-      "vision":"our vision",
-      "visionDec":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
-      "message":"Our message",
-      "messageDec":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum."
+    "story": {
+      "title1": "Hello",
+      "title2": "The story behind our center",
+      "title3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+      "storyTitle": "story",
+      "storyDec": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+      "vision": "our vision",
+      "visionDec": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+      "message": "Our message",
+      "messageDec": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum."
     },
-    "map":{
-      "title":"Our site",
-      "locationDec":"50, Afif 17532, Saudi Arabia, Kingdom of Saudi Arabia"
+    "map": {
+      "title": "Our site",
+      "locationDec": "50, Afif 17532, Saudi Arabia, Kingdom of Saudi Arabia"
+    },
+    "offer": {
+      "title1": "Offers",
+      "title2": "Latest Offers ",
+      "bestOffer": "Best Offers",
+      "discountTitle": "Enhance your experience with healthy nutrition tips, ongoing support and social activity ",
+      "discountDec": "Subscribe now and enjoy a discount of up to "
+    },
+    "program":{
+      "programTitle":"Programs",
+      "programDec":"Discover our programs "
     }
-    
   },
-  "contactUS":{
-    "title1":"We are pleased to have you communicate with us",
-      "title2":"One of our employees will respond to you as soon as possible",
-      "name":"Name",
-      "namePlace":"Enter full name",
-      "email":"Email",
-      "emailPlace":"Enter your email",
-      "pohne":"mobile number",
-      "pohnePlace":"Mobile Number +966",
-      "mes":"What's on your mind?",
-      "mesPlace":"Enter what you want to inquire about"
-    }
+  "contactUS": {
+    "title1": "We are pleased to have you communicate with us",
+    "title2": "One of our employees will respond to you as soon as possible",
+    "name": "Name",
+    "namePlace": "Enter full name",
+    "email": "Email",
+    "emailPlace": "Enter your email",
+    "pohne": "mobile number",
+    "pohnePlace": "Mobile Number +966",
+    "mes": "What's on your mind?",
+    "mesPlace": "Enter what you want to inquire about"
+  }
 }

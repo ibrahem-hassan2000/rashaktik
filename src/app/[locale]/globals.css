@@ -1916,11 +1916,13 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   .programs .content .part1 .Titles h3 {
     font-size: 24px;
     line-height: 32px;
+    max-width: 205px;
   }
   .programs .content .part1 .Titles h2 {
     font-size: 18px;
     margin-bottom: 4px;
     line-height: 22px;
+    text-align: start;
   }
 }
 /*hoursWork*/

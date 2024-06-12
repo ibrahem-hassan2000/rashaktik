@@ -2,8 +2,11 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { useTranslations } from "next-intl";
 
 function Programs({locale}) {
+  const t = useTranslations("home.program");
+
   const swiperRef = useRef(null);
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -21,8 +24,8 @@ function Programs({locale}) {
         <div className="content">
           <div className="part1">
             <div className="Titles">
-              <h2>البرامج</h2>
-              <h3>أكتشف برامجنا</h3>
+              <h2>{t('programTitle')}</h2>
+              <h3>{t('programDec')} </h3>
             </div>
             <div className="arrwo ">
               <button className="swiper-button-prev" onClick={goPrev}></button>

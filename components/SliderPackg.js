@@ -1,14 +1,15 @@
 "use client";
 import React from "react";
-import Slider from "react-slick";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import { EffectCoverflow} from "swiper/modules";
+import { useTranslations } from "next-intl";
 function SliderPackg() {
+  const t = useTranslations("home.offer");
   return (
     <>
       <div className="latestOffers" id="latestOffers">
-        <h2 className="titleOffer">العروض</h2>
-        <h3 className="titleOffer2">أحدث العروض</h3>
+        <h2 className="titleOffer">{t('title1')}</h2>
+        <h3 className="titleOffer2">{t('title2')} </h3>
         <div className="allOffers">
           <Swiper
           
@@ -57,7 +58,7 @@ function SliderPackg() {
               {" "}
               <div className="part bestOffer">
                 <div className="titleBest">
-                  <p>أفضل العروض</p>
+                  <p>{t('bestOffer')} </p>
                 </div>
                 <h2>نص سنوي</h2>
                 <h3 className="price">١٠٠٠ ر.س</h3>
@@ -135,7 +136,7 @@ function SliderPackg() {
               {" "}
               <div className="part bestOffer">
                 <div className="titleBest">
-                  <p>أفضل العروض</p>
+                  <p>{t('bestOffer')} </p>
                 </div>
                 <h2>نص سنوي</h2>
                 <h3 className="price">١٠٠٠ ر.س</h3>
