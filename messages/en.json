@@ -48,6 +48,11 @@
     "program":{
       "programTitle":"Programs",
       "programDec":"Discover our programs "
+    },
+    "hoursWork": {
+      "title": "",
+      "hoursDec1": "",
+      "hoursDec2": ""
     }
   },
   "contactUS": {

@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
 function HoursWork() {
+  const t = useTranslations("home.hoursWork");
+
   return (
     <section className="hoursWork" id="hoursWork">
       <div className="content">
