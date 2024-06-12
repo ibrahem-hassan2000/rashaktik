@@ -29,7 +29,10 @@ function Programs({locale}) {
               <button className="swiper-button-next" onClick={goNext}></button>
             </div>
           </div>
-          <div className="part2">
+         
+        </div>
+      </div>
+      <div className="part2">
             <Swiper
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
@@ -221,8 +224,6 @@ function Programs({locale}) {
               </SwiperSlide>
             </Swiper>
           </div>
-        </div>
-      </div>
     </section>
   );
 }

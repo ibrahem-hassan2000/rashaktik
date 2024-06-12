@@ -1690,6 +1690,8 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
 }
 /*programs*/
 .programs {
+  max-width: 1920px;
+  margin: auto;
 }
 .programs .content {
 }
@@ -1754,18 +1756,18 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
 html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   transform: none;
 }
-.programs .content .part2 {
+.programs  .part2 {
   display: flex;
   gap: 40px;
 }
-.programs .content .part2 .box {
+.programs  .part2 .box {
   padding: 40px 32px;
   border-radius: 12px;
   box-shadow: 2px 2px 10px 0px hsla(277, 40%, 63%, 0.2);
   width: min-content;
   transition: 0.3s;
 }
-.programs .content .part2 .box svg {
+.programs  .part2 .box svg {
   height: 52px;
   width: auto;
   max-width: 52px;
@@ -1773,10 +1775,10 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   transition: 0.4s;
   margin-bottom: 32px;
 }
-.programs .content .part2 .box svg path {
+.programs  .part2 .box svg path {
   transition: 0.4s;
 }
-.programs .content .part2 .box h2 {
+.programs  .part2 .box h2 {
   color: black;
   margin-bottom: 8px;
   font-size: 30px;
@@ -1786,26 +1788,26 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   transition: 0.4s;
   min-width: 350px;
 }
-.programs .content .part2 .box p {
+.programs  .part2 .box p {
   font-family: "TajL";
   line-height: 30px;
   font-size: 20px;
   color: hsla(240, 2%, 16%, 0.75);
   transition: 0.4s;
 }
-.programs .content .part2 .box:hover {
+.programs  .part2 .box:hover {
   background-color: var(--three_color);
   transform: scale(1.02) translateY(-8px);
   box-shadow: 2px 2px 10px 0px var(--three_color);
 }
-.programs .content .part2 .box:hover svg path {
+.programs  .part2 .box:hover svg path {
   fill: white;
   color: white;
 }
-.programs .content .part2 .box:hover h2 {
+.programs  .part2 .box:hover h2 {
   color: white;
 }
-.programs .content .part2 .box:hover p {
+.programs  .part2 .box:hover p {
   color: white;
 }
 .programs .swiper-slide {
@@ -1833,19 +1835,19 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   .programs .swiper-wrapper {
     margin-top: 30px;
   }
-  .programs .content .part2 .box svg {
+  .programs  .part2 .box svg {
     height: 46px;
 
     max-width: 50px;
 
     margin-bottom: 26px;
   }
-  .programs .content .part2 .box h2 {
+  .programs  .part2 .box h2 {
     font-size: 26px;
 
     line-height: 34px;
   }
-  .programs .content .part2 .box p {
+  .programs  .part2 .box p {
     line-height: 30px;
     font-size: 18px;
   }
@@ -1881,19 +1883,19 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   .programs .swiper-wrapper {
     margin: 20px 12px;
   }
-  .programs .content .part2 .box {
+  .programs  .part2 .box {
     padding: 26px 22px;
   }
-  .programs .content .part2 .box svg {
+  .programs  .part2 .box svg {
     height: 38px;
     max-width: 42px;
     margin-bottom: 12px;
   }
-  .programs .content .part2 .box h2 {
+  .programs  .part2 .box h2 {
     font-size: 20px;
     line-height: 30px;
   }
-  .programs .content .part2 .box p {
+  .programs  .part2 .box p {
     line-height: 22px;
     font-size: 16px;
   }
@@ -1904,10 +1906,10 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   }
 }
 @media (max-width: 500px) {
-  .programs .content .part2 .box {
+  .programs  .part2 .box {
     width: 95%;
   }
-  .programs .content .part2 .box h2 {
+  .programs  .part2 .box h2 {
     text-wrap: wrap;
     min-width: 100%;
   }
