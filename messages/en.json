@@ -49,10 +49,18 @@
       "programTitle":"Programs",
       "programDec":"Discover our programs "
     },
-    "hoursWork": {
-      "title": "",
-      "hoursDec1": "",
-      "hoursDec2": ""
+   "hoursWork": {
+      "title": "working hours"  ,
+      "hoursDec1":"All week from 8 am to 10 pm",
+      "hoursDec2": "Friday from 12 noon to 11 pm"
+    } ,
+    "header": {
+      "title":"Start building your body",
+      "title1":"We have everything you need",
+      "title11":" Your Fitness",
+      "title2":"For you he was found",
+      "title22":" Your fitness",
+      "qr":"Download our application through the App Store and Google Play to receive all new updates."
     }
   },
   "contactUS": {

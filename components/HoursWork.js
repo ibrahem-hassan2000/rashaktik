@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
@@ -20,15 +21,15 @@ function HoursWork() {
           />
           <div className="hoursTitle">
             <span></span>
-            <h2>ساعات العمل</h2>
+            <h2>{t("title")} </h2>
             <span></span>
           </div>
           <div className="hoursDetils">
           <p>
-          طوال الأسبوع من 8 صباحا الي 10 مساءا
+          {t("hoursDec1")}
           </p>
           <p>
-          الجمعة من 12 ضهرا حتي 11 مساءا
+          {t("hoursDec2")}
           </p>
           </div>
           
