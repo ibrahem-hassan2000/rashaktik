@@ -1,6 +1,8 @@
 {
   "home": {
     "nav": {
+      "titleLogo":"Your fitness center",
+      "titleLogo2":" Women's",
       "home": " Home",
       "about": "About Us",
       "contact": "Contact Us "

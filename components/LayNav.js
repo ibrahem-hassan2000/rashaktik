@@ -14,8 +14,8 @@ function LayNav({ locale }) {
       <div className="container">
         <Link className="navbar-brand" href="/">
           <Image  width={60} height={60}  src="/images/logo.svg" alt="logo" />
-          <h2> Your fitness center
-           <br/>Women's</h2>
+          <h2> {t('titleLogo')}
+           <br/>{t('titleLogo2')}</h2>
         </Link>
         <div className="navbar-toggler2">
           <button
