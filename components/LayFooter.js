@@ -13,13 +13,15 @@ function LayFooter() {
           <div className="part1">
             <Link href={"/"}>
               <Image
-                width={348}
-                height={150}
+                width={120}
+                height={120}
                 src="/images/logo.svg"
                 alt="logo"
               />
+            <h2 > {t('titleLogo')}
+            <br/>{t('titleLogo2')}</h2>
             </Link>
-            <h2>{t("title")}</h2>
+            <h3>{t("title")}</h3>
           </div>
           <div className="links">
             <ul>

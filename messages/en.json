@@ -23,7 +23,9 @@
       "map": "Location",
       "follow": "Follow Us",
       "copy1": " 2023 Women's Fitness Center | Developed by",
-      "copy2": "Hayat Technology Company"
+      "copy2": "Hayat Technology Company",
+      "titleLogo":"Your fitness center",
+      "titleLogo2":" Women's"
     },
     "story": {
       "title1": "Hello",
