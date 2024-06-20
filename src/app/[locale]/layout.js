@@ -5,9 +5,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import "bootstrap/dist/css/bootstrap.min.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "./globals.css";
 import LayNav from "../../../components/LayNav";
 import LayFooter from "../../../components/LayFooter";
+import UseAnimation from "../../../components/UseAnimation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Script from "next/script";
 
@@ -25,6 +28,7 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={params.locale} dir={params.locale === "ar" ? "rtl" : "ltr"}>
       <body className={inter.className}>
+        <UseAnimation/>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <LayNav locale={params.locale} />
           <main>{children}</main>

@@ -13,13 +13,13 @@ function HeaderPage() {
           <Image width={1086} height={1030} src="/images/hero_design.svg" />
         </div>
         <div className="part2">
-          <span className="spanOne">{t("title")} </span>
-          <h1>
+          <span className="spanOne" data-aos="fade-up" data-aos-duration="2000">{t("title")} </span>
+          <h1 data-aos="fade-up">
             {t("title1")}
-            <span> {t("title11")}</span>
+            <span data-aos="zoom-in" data-aos-duration="2000"> {t("title11")}</span>
             <br />
             {t("title2")}
-            <span> {t("title22")}</span>
+            <span data-aos="zoom-in" data-aos-duration="2000"> {t("title22")}</span>
           </h1>
           <div className="QRcode">
             <h3>{t("qr")}</h3>

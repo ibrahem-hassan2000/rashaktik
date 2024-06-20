@@ -7,13 +7,13 @@ function Map() {
   const t = useTranslations("home.map");
 
   return (
-    <section className='map' id='map'>
+    <section className='map' data-aos="zoom-in" id='map'>
         <div className='con'> 
         <div className='content'>
             <div className='imgMap'>
                 <Image  height={620} width={1720} src='/images/Basemap.png' alt='map'/>
             </div>
-            <div className='titleMap'>
+            <div className='titleMap' data-aos="fade-up" data-aos-duration="2000">
                 <h2>{t("title")}</h2>
                 <p>{t("locationDec")} </p>
             </div>

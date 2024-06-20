@@ -11,10 +11,10 @@ function Story() {
       <div className="con">
         <div className="content">
           <div className="part1">
-            <span>{t("title1")}</span>
-            <h2>{t("title2")} </h2>
-            <p className="pStory">{t("title3")}</p>
-            <div className="box box1">
+            <span data-aos="fade-up" data-aos-duration="2000">{t("title1")}</span>
+            <h2  data-aos="fade-up">{t("title2")} </h2>
+            <p className="pStory" data-aos="zoom-in" data-aos-duration="2000">{t("title3")}</p>
+            <div className="box box1" data-aos="fade-up">
               <h3>{t("storyTitle")}</h3>
               <p>{t("storyDec")}</p>
               <Image
@@ -26,11 +26,11 @@ function Story() {
             </div>
           </div>
           <div className="part2">
-            <div className="box box2">
+            <div className="box box2" data-aos="fade-up">
               <h3> {t("vision")}</h3>
               <p>{t("visionDec")}</p>
             </div>
-            <div className="box box3">
+            <div className="box box3" data-aos="fade-up">
               <h3> {t("message")}</h3>
               <p>{t("messageDec")}</p>
             </div>

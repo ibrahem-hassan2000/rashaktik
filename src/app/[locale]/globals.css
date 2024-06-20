@@ -1527,6 +1527,7 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
   font-family: "TajM";
   line-height: 40px;
   margin-bottom: 16px;
+  display: block;
 }
 .story .content .part1 h2 {
   font-family: "TajB";
@@ -2112,6 +2113,7 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   line-height: 40px;
   margin-bottom: 14px;
   font-family: "TajB";
+  display: block;
 }
 .header .content .part2 h1 {
   color: black;
@@ -2125,6 +2127,7 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   font-family: "TajB";
   line-height: 74px;
   margin: 0;
+  display: inline-block;
 }
 .header .content .part2 .QRcode {
   background-color: var(--three_color);
