@@ -13,7 +13,9 @@ function LayNav({ locale }) {
     <nav className={`navbar  navbar-expand-lg ${pathname.split('').length>1?'have':''}`}>
       <div className="container">
         <Link className="navbar-brand" href="/">
-          <Image  width={174} height={74}  src="/images/logo.svg" alt="logo" />
+          <Image  width={60} height={60}  src="/images/logo.svg" alt="logo" />
+          <h2> Your fitness center
+           <br/>Women's</h2>
         </Link>
         <div className="navbar-toggler2">
           <button
