@@ -11,7 +11,7 @@ export default function Home({params}) {
   const t =useTranslations("home.about")
   return (
   <>
-  <HeaderPage/>
+  <HeaderPage  locale={params.locale}/>
   <HoursWork/>
   <Programs locale={params.locale}/>
   <Offer/>

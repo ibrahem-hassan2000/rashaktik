@@ -8,6 +8,8 @@
 body {
   background: white;
   overflow-x: hidden;
+  max-width: 100vh;
+  margin: 0px auto;
 }
 @font-face {
   font-family: "TajL";
@@ -150,6 +152,7 @@ html[dir="ltr"] .navbar::before {
 }
 .navbar-toggler {
   border: 0 !important;
+  padding: 0;
 }
 
 .navbar-toggler:focus,
@@ -2119,15 +2122,16 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   color: black;
   font-size: 60px;
   font-family: "TajM";
-  line-height: 74px;
+  line-height: normal;
   margin: 0;
 }
 .header .content .part2 h1 span {
   color: var(--main_color);
   font-family: "TajB";
-  line-height: 74px;
+  line-height: normal;
   margin: 0;
   display: inline-block;
+  padding: 0px 6px;
 }
 .header .content .part2 .QRcode {
   background-color: var(--three_color);
@@ -2172,14 +2176,14 @@ html[dir='ltr'] .header .content .part2 .QRcode{
 @media(max-width:1550px){
   .header .content .part2 h1 {
     font-size: 44px;
-    line-height: 70px;
+   
 }
 .header .content .part2 .QRcode {
  
   margin-top: 70px;
 }
 .header .content .part2 h1 span {
-  line-height: 70px;
+ 
 
 }
 }
@@ -2191,10 +2195,10 @@ html[dir='ltr'] .header .content .part2 .QRcode{
 }
 .header .content .part2 h1 {
   font-size: 38px;
-  line-height: 56px;
+
 }
 .header .content .part2 h1 span {
-  line-height: 56px;
+
 }
 .header .content .part2 .QRcode {
   margin-top: 56px;
@@ -2257,7 +2261,10 @@ html[dir='ltr'] .header .content .part2 .QRcode{
 @media(max-width:600px){
   .header .content .part2 h1, .header .content .part2 h1 span {
     font-size: 25px;
-    line-height: 36px;
+
+}
+.header .content .part2 h1 span {
+  padding: 0px 5px;
 }
 .header .content .part2 .spanOne {
   font-size: 18px;

@@ -3,14 +3,17 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
-function HeaderPage() {
+function HeaderPage({locale}) {
   const t = useTranslations ("home.header");
-
+console.log(locale);
   return (
     <section className="header">
       <div className="content">
         <div className="part1">
-          <Image width={1086} height={1030} src="/images/hero_design.svg" />
+          {
+            locale === 'ar' ?   <Image width={1086} height={1030} src="/images/hero_design.svg" />: <Image width={1086} height={1030} src="/images/hero_design2.svg" />
+          }
+         
         </div>
         <div className="part2">
           <span className="spanOne" data-aos="fade-up" data-aos-duration="2000">{t("title")} </span>
