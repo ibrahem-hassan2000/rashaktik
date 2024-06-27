@@ -1080,7 +1080,7 @@ html[dir="ltr"] .contactUs .content .part2::after {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url("https://s3-alpha-sig.figma.com/img/8f9b/f866/024ded9473e3ee2c7b06c43caa480e8d?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pwCBXNgnHMp0qzbzlvsoKbvPr53mdCrxny8uuz5fB0O9AHQMGtvLakvkuWpvJhdqjm6VqtBO9QckJ8KpqT~pjWB77P1sECARN6jtw3dppwHgUWfdWI9dLeBzeP7gNzgUdGU7tOnBVaI3kJB5M48WxRy51Y2rLLHzgGGfFg2z22rnzxujw4ell4glTSzkOHYAsDjGh1VPKSaCH6BU4876YBIH7KiMvkR7N-KbLscAUAitvLcs9oFqSUkvg1zByRPSMvMvxa~kolq30e98S3dH5KhQJkc1gxPtwjvFaMVDnfuA8o7EQoKEjzynjZmAbf8cmeXugTBZEtsn8cdLi1vN5Q__");
+  background-image: url("../../../public/images/backOffer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
