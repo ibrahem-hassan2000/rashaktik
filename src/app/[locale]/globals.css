@@ -1295,13 +1295,19 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
   min-height: 700px;
 }
 .latestOffers .allOffers .swiper-slide-active .part {
-  padding: 100px 36px;
+  padding: 50px 36px;
+  transform: translateY(-50px);
+  transition: 0.5s;
 }
 .latestOffers .allOffers .swiper-slide-active .part {
   background-color: var(--main_color) !important;
 }
 .latestOffers .allOffers .swiper-slide-active .part h2 {
   color: white;
+}
+
+.latestOffers .swiper-slide{
+  transition: 0.5s;
 }
 @media (max-width: 1200px) {
   .latestOffers .allOffers .part h2 {
@@ -1323,7 +1329,7 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
     background-size: 20px;
   }
   .latestOffers .allOffers .swiper-slide-active .part {
-    padding: 70px 28px;
+    padding: 40px 28px;
   }
   .latestOffers .allOffers .part {
     padding: 40px 32px 40px;
@@ -1342,6 +1348,11 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
     font-size: 24px;
     margin-bottom: 8px;
   }
+  .latestOffers .allOffers .swiper-slide-active .part {
+    padding: 42px 36px;
+    transform: translateY(-30px);
+   
+}
 }
 @media (max-width: 768px) {
   .latestOffers .allOffers .part {
@@ -1382,6 +1393,12 @@ html[dir="ltr"] .latestOffers .allOffers .part ul li::before {
   .latestOffers .allOffers .swiper-wrapper {
     min-height: 450px;
   }
+  .latestOffers .allOffers .swiper-slide-active .part {
+    padding: 40px 36px;
+    transform: translateY(-28px);
+  
+}
+
 }
 /*map*/
 .pulse {
