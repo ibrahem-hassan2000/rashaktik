@@ -1860,7 +1860,17 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
   transition: 0.4s;
   min-width: 350px;
 }
+.programs .part2 .box .contentProgram {
+  min-height: 80px;
+}
 .programs .part2 .box p {
+  font-family: "TajL";
+  line-height: 30px;
+  font-size: 20px;
+  color: hsla(240, 2%, 16%, 0.75);
+  transition: 0.4s;
+}
+.programs .part2 .box .contentProgram span {
   font-family: "TajL";
   line-height: 30px;
   font-size: 20px;
@@ -1883,6 +1893,9 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
 }
 .programs .swiper-slide {
   width: fit-content;
+}
+.programs span.show-more-less-clickable {
+  color: #a77bc8 !important;
 }
 @media (max-width: 1200px) {
   .programs .content .part1 .Titles h2 {
@@ -1929,6 +1942,11 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
     line-height: 30px;
     font-size: 18px;
   }
+  .programs .part2 .box   .contentProgram span {
+    line-height: 30px;
+    font-size: 18px;
+  }
+
   .programs .content .part1 .arrwo {
     width: 134px;
     height: 56px;
@@ -1982,11 +2000,19 @@ html[dir="ltr"] .programs .content .part1 .arrwo button::after {
     line-height: 22px;
     font-size: 16px;
   }
+  .programs .part2 .box   .contentProgram span {
+    line-height: 22px;
+    font-size: 16px;
+  }
+
   .programs .content .part1 .arrwo {
     width: 94px;
     height: 40px;
     gap: 14px;
   }
+  .programs .part2 .box .contentProgram {
+    min-height: 70px;
+}
 }
 @media (max-width: 500px) {
   .programs .part2 .box {

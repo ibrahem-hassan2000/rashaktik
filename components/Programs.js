@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import axios from "axios";
-
-function Programs({locale}) {
+import ShowMoreText from "react-show-more-text";
+function Programs({ locale }) {
   const t = useTranslations("home.program");
 
   const swiperRef = useRef(null);
@@ -48,61 +48,72 @@ function Programs({locale}) {
         <div className="content">
           <div className="part1">
             <div className="Titles">
-              <h2>{t('programTitle')}</h2>
-              <h3>{t('programDec')} </h3>
+              <h2>{t("programTitle")}</h2>
+              <h3>{t("programDec")} </h3>
             </div>
             <div className="arrwo ">
               <button className="swiper-button-prev" onClick={goPrev}></button>
               <button className="swiper-button-next" onClick={goNext}></button>
             </div>
           </div>
-         
         </div>
       </div>
       <div className="part2">
-            <Swiper
-              onSwiper={(swiper) => {
-                swiperRef.current = swiper;
-              }}
-              dir={locale==='en'?'ltr':'rtl'}
-              slidesPerView={'auto'}
-              slidesPerGroup={1}
-              spaceBetween={30}
-              navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-              }}
-              modules={[Navigation]}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 6,
-                },
-                500: {
-                  slidesPerView: 'auto',
-                  spaceBetween: 10,
-                },
-              }}
-              className="mySwiper"
-            >
-              {
-                Programs.length>1? Programs.map((item ,i)=>{
-                  return(
-                    <SwiperSlide key={i}>
-                    {" "}
-                    <div className="box">
-                      <img src={item.Image} alt={item.MainAddress}/>
-                      <h2> {item.MainAddress} </h2>
-                      <div dangerouslySetInnerHTML={{ __html: item.Details }} />
-                     
+        <Swiper
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          dir={locale === "en" ? "ltr" : "rtl"}
+          slidesPerView={"auto"}
+          slidesPerGroup={1}
+          spaceBetween={30}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          modules={[Navigation]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 6,
+            },
+            500: {
+              slidesPerView: "auto",
+              spaceBetween: 10,
+            },
+          }}
+          className="mySwiper"
+        >
+          {Programs.length > 1 ? (
+            Programs.map((item, i) => {
+              return (
+                <SwiperSlide key={i}>
+                  {" "}
+                  <div className="box">
+                    <img src={item.Image} alt={item.MainAddress} />
+                    <h2> {item.MainAddress} </h2>
+                    <div className="contentProgram">
+                      <ShowMoreText
+                        lines={2}
+                        more={t('more')}
+                        less={t('less')}
+                        expanded={false}
+                        width={0}
+                      >
+                        <div
+                          dangerouslySetInnerHTML={{ __html: item.Details }}
+                        />
+                      </ShowMoreText>
                     </div>
-                  </SwiperSlide>
-                  )
-                }):<></>
-              }
-             
-            </Swiper>
-          </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })
+          ) : (
+            <></>
+          )}
+        </Swiper>
+      </div>
     </section>
   );
 }

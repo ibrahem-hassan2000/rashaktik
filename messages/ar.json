@@ -52,7 +52,10 @@
     },
     "program": {
       "programTitle": "البرامج",
-      "programDec": "أكتشف برامجنا"
+      "programDec": "أكتشف برامجنا",
+  "more":"عرض المزيد",
+      "less":"... عرض أقل"
+
     },
     "hoursWork": {
       "title": "ساعات العمل",

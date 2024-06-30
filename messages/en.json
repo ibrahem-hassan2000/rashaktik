@@ -52,7 +52,9 @@
     },
     "program":{
       "programTitle":"Programs",
-      "programDec":"Discover our programs "
+      "programDec":"Discover our programs ",
+      "more":"Show more",
+      "less":"...Show less"
     },
    "hoursWork": {
       "title": "working hours"  ,
