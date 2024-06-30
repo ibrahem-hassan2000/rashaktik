@@ -1,20 +1,40 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow} from "swiper/modules";
+import { EffectCoverflow } from "swiper/modules";
 import { useTranslations } from "next-intl";
-function SliderPackg() {
+import axios from "axios";
+function SliderPackg({ locale }) {
   const t = useTranslations("home.offer");
+  const [Subscription, setSubscription] = useState([]);
+  useEffect(() => {
+    GetSubscription();
+  }, [locale]);
+  const GetSubscription = () => {
+    const po = axios
+      .get("https://staging-rashektk.newlovrspa.com/api/get_Subscription", {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Accept: "application/json",
+          lang: locale,
+        },
+      })
+      .then((res) => {
+        setSubscription(res.data.data);
+      })
+      .catch((res) => {
+        console.log(res);
+      });
+  };
+
   return (
     <>
       <div className="latestOffers" id="latestOffers">
-        <h2 className="titleOffer">{t('title1')}</h2>
-        <h3 className="titleOffer2">{t('title2')} </h3>
+        <h2 className="titleOffer">{t("title1")}</h2>
+        <h3 className="titleOffer2">{t("title2")} </h3>
         <div className="allOffers">
           <Swiper
-          
             slidesPerView={5}
-
             spaceBetween={70}
             centeredSlides={true}
             loop={true}
@@ -34,7 +54,7 @@ function SliderPackg() {
                 slidesPerView: 1.5,
                 spaceBetween: 10,
               },
-              600:{
+              600: {
                 slidesPerView: 2.5,
                 spaceBetween: 10,
               },
@@ -54,162 +74,36 @@ function SliderPackg() {
             modules={[EffectCoverflow]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              {" "}
-              <div className="part bestOffer">
-                <div className="titleBest">
-                  <p>{t('bestOffer')} </p>
-                </div>
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color2 ">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color3">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color2">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color3">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part bestOffer">
-                <div className="titleBest">
-                  <p>{t('bestOffer')} </p>
-                </div>
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color3 ">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color2">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color3">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="part color3">
-                <h2>نص سنوي</h2>
-                <h3 className="price">١٠٠٠ ر.س</h3>
-                <ul>
-                  <li>دخول غير محدود إلى صالة الألعاب الرياضية</li>
-                  <li>4x مستشار لياقة بدنية</li>
-                  <li>تتبع التغذية</li>
-                  <li>3x ملحق مجاني</li>
-                  <li>5 أيام في الأسبوع</li>
-                  <li>مدرب شخصي</li>
-                </ul>
-              </div>
-            </SwiperSlide>
+            {Subscription.map((item,i) => {
+              return (
+                <SwiperSlide key={i}>
+                  {" "}
+                  <div className="part bestOffer">
+                    {/* <div className="titleBest">
+                      <p>{t('bestOffer')} </p>
+                    </div> */}
+                    <h2>{item.category} </h2>
+                    <h3 className="price">{item.price} ر.س</h3>
+                    <div dangerouslySetInnerHTML={{ __html: item.Details }} />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+            {Subscription.map((item,i) => {
+              return (
+                <SwiperSlide key={i}>
+                  {" "}
+                  <div className="part bestOffer">
+                    {/* <div className="titleBest">
+                      <p>{t('bestOffer')} </p>
+                    </div> */}
+                    <h2>{item.category} </h2>
+                    <h3 className="price">{item.price} ر.س</h3>
+                    <div dangerouslySetInnerHTML={{ __html: item.Details }} />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>

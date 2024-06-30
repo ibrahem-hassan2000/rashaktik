@@ -4,7 +4,7 @@ import axios from "axios";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
-function page() {
+function page({params}) {
   const t = useTranslations("contactUS");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,6 +19,7 @@ function page() {
   const [Loading, setLoading] = useState(false);
 
   const handelContactUS = () => {
+   
     setLoading(true)
     const po = axios
       .post(
@@ -33,6 +34,7 @@ function page() {
           headers: {
             "Content-Type": "multipart/form-data",
             Accept: "application/json",
+            'lang':params.locale
           },
         }
       )

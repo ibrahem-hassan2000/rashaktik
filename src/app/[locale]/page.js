@@ -15,7 +15,7 @@ export default function Home({params}) {
   <HoursWork/>
   <Programs locale={params.locale}/>
   <Offer/>
-  <SliderPackg/>
+  <SliderPackg locale={params.locale}/>
   <Map/>
   <Story/>
   </>

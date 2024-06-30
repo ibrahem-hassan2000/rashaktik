@@ -1,8 +1,9 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useTranslations } from "next-intl";
+import axios from "axios";
 
 function Programs({locale}) {
   const t = useTranslations("home.program");
@@ -18,6 +19,31 @@ function Programs({locale}) {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
+  const [Programs, setPrograms] = useState([]);
+  useEffect(() => {
+    GetSubscription();
+  }, [locale]);
+  const GetSubscription = () => {
+    const po = axios
+      .get("https://staging-rashektk.newlovrspa.com/api/programs", {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Accept: "application/json",
+          lang: locale,
+        },
+      })
+      .then((res) => {
+        console.log(res.data.data);
+        setPrograms(res.data.data);
+      })
+      .catch((res) => {
+        console.log(res);
+      });
+  };
+console.log('====================================');
+console.log(Programs);
+console.log('====================================');
   return (
     <section className="programs" id="programs">
       <div className="con">
