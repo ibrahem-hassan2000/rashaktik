@@ -10,6 +10,7 @@ function page({params}) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
+  const [doneSend, setDoneSend] = useState("");
 /*errors*/ 
   const [nameErorr, setNameErorr] = useState("");
   const [emailErorr, setEmailErorr] = useState("");
@@ -39,8 +40,11 @@ function page({params}) {
         }
       )
       .then((res) => {
+        setDoneSend(res.data.message)
+
     setLoading(false)
-        console.log(res);
+        console.log(res.data.message);
+        
         setName("");
         setEmail("");
         setPhone("");
@@ -54,28 +58,30 @@ function page({params}) {
     setLoading(false)
 
         setNameErorr(
-          res.response.data?.errors?.name
-            ? res.response.data.errors.name[0]
+          res.response?.data?.data?.name
+            ? res.response.data.data.name
             : null
         );
         setEmailErorr(
-          res.response.data?.errors?.email
-            ? res.response.data.errors.email[0]
+          res.response.data?.data?.email
+            ? res.response.data.data.email
             : null
         );
         setPhoneErorr(
-          res.response?.data?.errors?.mobile
-            ? res.response?.data?.errors?.mobile[0]
+          res.response?.data?.data?.phone
+            ? res.response?.data?.data?.phone
             : null
         );
         setSubjectError(
-          res.response?.data?.errors?.subject
-            ? res.response?.data?.errors?.subject[0]
+          res.response?.data?.data?.subject
+            ? res.response?.data?.data?.subject
             : null
         );
-        console.log(res);
+        console.log(res.response.data.data);
       });
   };
+
+
   return (
     <section className="contactUs">
          <LoadingOverlay
@@ -94,6 +100,7 @@ function page({params}) {
             <div className="partInput">
               <label>{t("name")}</label>
               <input onChange={(e)=>{setName(e.target.value)}} type="text" placeholder={t("namePlace")}/>
+              <p className="errorMes">{nameErorr}</p>
             </div>
 
             <div className="partInput">
@@ -103,18 +110,22 @@ function page({params}) {
                 onChange={(e)=>{setEmail(e.target.value)}}
                 placeholder={t("emailPlace")}
               />
+               <p className="errorMes">{emailErorr}</p>
             </div>
             <div className="partInput">
               <label>{t("pohne")} </label>
               <input  onChange={(e)=>{setPhone(e.target.value)}} type="text" placeholder={t("pohnePlace")} />
+              <p className="errorMes">{phoneErorr}</p>
             </div>
             <div className="partInput">
               <label>{t("mes")}</label>
               <textarea  onChange={(e)=>{setSubject(e.target.value)}} placeholder={t("mesPlace")} />
+              <p className="errorMes">{subjectError}</p>
             </div>
             <div className="partInput">
            
              <input className="send" type="submit" value={'ارسال'} onClick={(e)=>{e.preventDefault();handelContactUS()}} />
+             <p style={{textAlign:'center'}}>{doneSend}</p>
             </div>
           </form>
         </div>
