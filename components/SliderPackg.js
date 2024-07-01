@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import axios from "axios";
+
 function SliderPackg({ locale }) {
   const t = useTranslations("home.offer");
   const [Subscription, setSubscription] = useState([]);
@@ -20,6 +21,8 @@ function SliderPackg({ locale }) {
         },
       })
       .then((res) => {
+        console.log(res.data.data);
+
         setSubscription(res.data.data);
       })
       .catch((res) => {
@@ -74,32 +77,45 @@ function SliderPackg({ locale }) {
             modules={[EffectCoverflow]}
             className="mySwiper"
           >
-            {Subscription.map((item,i) => {
+            {Subscription.map((item, i) => {
               return (
                 <SwiperSlide key={i}>
                   {" "}
                   <div className="part bestOffer">
-                    {/* <div className="titleBest">
-                      <p>{t('bestOffer')} </p>
-                    </div> */}
+                  {item.isBast ? (
+                      <div className="titleBest">
+                        <p>{t("bestOffer")} </p>
+                      </div>
+                    ) : null}
                     <h2>{item.category} </h2>
                     <h3 className="price">{item.price} ر.س</h3>
-                    <div dangerouslySetInnerHTML={{ __html: item.Details }} />
+                    <ul>
+                      {item.Details_tag.map((details, i) => {
+                        return <li>{details.value}</li>;
+                      })}
+                    </ul>
                   </div>
                 </SwiperSlide>
               );
             })}
-            {Subscription.map((item,i) => {
+            {Subscription.map((item, i) => {
               return (
                 <SwiperSlide key={i}>
                   {" "}
                   <div className="part bestOffer">
-                    {/* <div className="titleBest">
-                      <p>{t('bestOffer')} </p>
-                    </div> */}
+                    {item.isBast ? (
+                      <div className="titleBest">
+                        <p>{t("bestOffer")} </p>
+                      </div>
+                    ) : null}
+
                     <h2>{item.category} </h2>
                     <h3 className="price">{item.price} ر.س</h3>
-                    <div dangerouslySetInnerHTML={{ __html: item.Details }} />
+                    <ul>
+                      {item.Details_tag.map((details, i) => {
+                        return <li>{details.value}</li>;
+                      })}
+                    </ul>
                   </div>
                 </SwiperSlide>
               );

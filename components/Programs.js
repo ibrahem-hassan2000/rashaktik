@@ -34,7 +34,6 @@ function Programs({ locale }) {
         },
       })
       .then((res) => {
-        console.log(res.data.data);
         setPrograms(res.data.data);
       })
       .catch((res) => {

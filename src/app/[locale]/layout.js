@@ -29,6 +29,7 @@ export default function RootLayout({ children, params }) {
 
   return (
     <html lang={params.locale} dir={params.locale === "ar" ? "rtl" : "ltr"}>
+       <link rel="icon" href="/images/favicon.ico" sizes="any" />
       <body className={inter.className}>
         <UseAnimation/>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
