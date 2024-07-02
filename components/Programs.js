@@ -23,7 +23,7 @@ function Programs({ locale }) {
   const [Programs, setPrograms] = useState([]);
   useEffect(() => {
     GetSubscription();
-  }, [locale]);
+  }, []);
   const GetSubscription = () => {
     const po = axios
       .get("https://staging-rashektk.newlovrspa.com/api/programs", {
@@ -89,8 +89,8 @@ function Programs({ locale }) {
                 <SwiperSlide key={i}>
                   {" "}
                   <div className="box">
-                    <img src={item.Image} alt={item.MainAddress} />
-                    <h2> {item.MainAddress} </h2>
+                    <img src={item.Image} alt={item.MainAddress[locale]} />
+                    <h2> {item.MainAddress[locale]} </h2>
                     <div className="contentProgram">
                       <ShowMoreText
                         lines={2}
@@ -100,7 +100,7 @@ function Programs({ locale }) {
                         width={0}
                       >
                         <div
-                          dangerouslySetInnerHTML={{ __html: item.Details }}
+                          dangerouslySetInnerHTML={{ __html: item.Details[locale] }}
                         />
                       </ShowMoreText>
                     </div>

@@ -38,7 +38,7 @@ function LayFooter() {
                 <Link href="/#map">{t("map")} </Link>
               </li>
               <li>
-                <Link href="/#map">{t("terms")} </Link>
+                <Link href="/terms">{t("terms")} </Link>
               </li>
             </ul>
           </div>

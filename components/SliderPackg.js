@@ -100,7 +100,7 @@ function SliderPackg({ locale }) {
             })}
             {Subscription.map((item, i) => {
               return (
-                <SwiperSlide key={i}>
+                <SwiperSlide key={i*2}>
                   {" "}
                   <div className="part bestOffer">
                     {item.isBast ? (
