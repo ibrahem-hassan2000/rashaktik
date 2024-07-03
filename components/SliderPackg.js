@@ -8,21 +8,20 @@ import axios from "axios";
 function SliderPackg({ locale }) {
   const t = useTranslations("home.offer");
   const [Subscription, setSubscription] = useState([]);
+  
   useEffect(() => {
     GetSubscription();
-  }, [locale]);
+  }, []);
   const GetSubscription = () => {
     const po = axios
       .get("https://staging-rashektk.newlovrspa.com/api/get_Subscription", {
         headers: {
           "Content-Type": "multipart/form-data",
           Accept: "application/json",
-          lang: locale,
         },
       })
       .then((res) => {
         console.log(res.data.data);
-
         setSubscription(res.data.data);
       })
       .catch((res) => {
@@ -87,11 +86,11 @@ function SliderPackg({ locale }) {
                         <p>{t("bestOffer")} </p>
                       </div>
                     ) : null}
-                    <h2>{item.category} </h2>
+                    <h2>{item.category[locale]} </h2>
                     <h3 className="price">{item.price} ر.س</h3>
                     <ul>
-                      {item.Details_tag.map((details, i) => {
-                        return <li>{details.value}</li>;
+                      {item.Details_tag[locale].map((details, j) => {
+                        return <li key={j}>{details.value}</li>;
                       })}
                     </ul>
                   </div>
@@ -108,12 +107,14 @@ function SliderPackg({ locale }) {
                         <p>{t("bestOffer")} </p>
                       </div>
                     ) : null}
-
-                    <h2>{item.category} </h2>
+ <div className="titleBest">
+                        <p>{t("bestOffer")} </p>
+                      </div>
+                    <h2>{item.category[locale]} </h2>
                     <h3 className="price">{item.price} ر.س</h3>
                     <ul>
-                      {item.Details_tag.map((details, i) => {
-                        return <li>{details.value}</li>;
+                    {item.Details_tag[locale].map((details, j) => {
+                        return <li key={j*2}>{details.value}</li>;
                       })}
                     </ul>
                   </div>

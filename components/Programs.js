@@ -30,7 +30,6 @@ function Programs({ locale }) {
         headers: {
           "Content-Type": "multipart/form-data",
           Accept: "application/json",
-          lang: locale,
         },
       })
       .then((res) => {
