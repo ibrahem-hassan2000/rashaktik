@@ -638,6 +638,9 @@ footer .content {
   gap: 40px;
   flex-wrap: wrap;
 }
+html[dir='ltr'] footer .content{
+  gap: 30px;
+}
 footer .content .part1 {
   max-width: 330px;
 
@@ -678,6 +681,10 @@ footer .content .links ul {
   gap: 30px;
   justify-content: center;
 }
+html[dir='ltr'] footer .content .links ul{
+  gap: 20px;
+
+}
 footer .content .links ul li {
 }
 footer .content .links ul li a {
@@ -686,6 +693,9 @@ footer .content .links ul li a {
   font-family: "TajB";
   line-height: 29px;
   transition: 0.4s;
+}
+html[dir='ltr'] footer .content .links ul li a {
+font-size: 18px;
 }
 footer .content .links ul li a:hover {
   color: var(--second_color);
