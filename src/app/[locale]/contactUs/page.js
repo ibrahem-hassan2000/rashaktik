@@ -41,6 +41,10 @@ function page({params}) {
       )
       .then((res) => {
         setDoneSend(res.data.message)
+        setName("");
+        setEmail("");
+        setPhone("");
+        setSubject("");
 
     setLoading(false)
         console.log(res.data.message);
@@ -99,7 +103,7 @@ function page({params}) {
           <form className="contactUsForm">
             <div className="partInput">
               <label>{t("name")}</label>
-              <input onChange={(e)=>{setName(e.target.value)}} type="text" placeholder={t("namePlace")}/>
+              <input onChange={(e)=>{setName(e.target.value)}} value={name} type="text" placeholder={t("namePlace")}/>
               <p className="errorMes">{nameErorr}</p>
             </div>
 
@@ -107,6 +111,7 @@ function page({params}) {
               <label>{t("email")} </label>
               <input
                 type="email"
+                value={email}
                 onChange={(e)=>{setEmail(e.target.value)}}
                 placeholder={t("emailPlace")}
               />
@@ -114,17 +119,17 @@ function page({params}) {
             </div>
             <div className="partInput">
               <label>{t("pohne")} </label>
-              <input  onChange={(e)=>{setPhone(e.target.value)}} type="text" placeholder={t("pohnePlace")} />
+              <input value={phone}  onChange={(e)=>{setPhone(e.target.value)}} type="text" placeholder={t("pohnePlace")} />
               <p className="errorMes">{phoneErorr}</p>
             </div>
             <div className="partInput">
               <label>{t("mes")}</label>
-              <textarea  onChange={(e)=>{setSubject(e.target.value)}} placeholder={t("mesPlace")} />
+              <textarea  value={subject} onChange={(e)=>{setSubject(e.target.value)}} placeholder={t("mesPlace")} />
               <p className="errorMes">{subjectError}</p>
             </div>
             <div className="partInput">
            
-             <input className="send" type="submit" value={'ارسال'} onClick={(e)=>{e.preventDefault();handelContactUS()}} />
+             <input className="send" type="submit" value={t("send")} onClick={(e)=>{e.preventDefault();handelContactUS()}} />
              <p style={{textAlign:'center'}}>{doneSend}</p>
             </div>
           </form>

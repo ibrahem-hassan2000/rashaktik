@@ -1,8 +1,8 @@
 {
   "home": {
     "nav": {
-      "titleLogo":"Your fitness center",
-      "titleLogo2":" Women's",
+      "titleLogo": "Your fitness center",
+      "titleLogo2": " Women's",
       "home": " Home",
       "about": "About Us",
       "contact": "Contact Us "
@@ -22,11 +22,11 @@
       "offer": "Offers",
       "map": "Location",
       "follow": "Follow Us",
-      "copy1": " 2023 Women's Fitness Center | Developed by",
-      "copy2": "Hayat Technology Company",
-      "titleLogo":"Your fitness center",
-      "titleLogo2":" Women's",
-      "terms":"Terms & Conditions"
+      "copy1": " 2023 Women's Fitness Center | Developed by ",
+      "copy2": " Hayat Technology Company",
+      "titleLogo": "Your fitness center",
+      "titleLogo2": " Women's",
+      "terms": "Terms & Conditions"
     },
     "story": {
       "title1": "Hello",
@@ -50,24 +50,24 @@
       "discountTitle": "Enhance your experience with healthy nutrition tips, ongoing support and social activity ",
       "discountDec": "Subscribe now and enjoy a discount of up to "
     },
-    "program":{
-      "programTitle":"Programs",
-      "programDec":"Discover our programs ",
-      "more":"Show more",
-      "less":"...Show less"
+    "program": {
+      "programTitle": "Programs",
+      "programDec": "Discover our programs ",
+      "more": "Show more",
+      "less": "...Show less"
     },
-   "hoursWork": {
-      "title": "working hours"  ,
-      "hoursDec1":"All week from 8 am to 10 pm",
+    "hoursWork": {
+      "title": "working hours",
+      "hoursDec1": "All week from 8 am to 10 pm",
       "hoursDec2": "Friday from 12 noon to 11 pm"
-    } ,
+    },
     "header": {
-      "title":"Start building your body",
-      "title1":"We have everything you need",
-      "title11":" Your Fitness",
-      "title2":"For you he was found",
-      "title22":" Your fitness",
-      "qr":"Download our application through the App Store and Google Play to receive all new updates."
+      "title": "Start building your body",
+      "title1": "We have everything you need",
+      "title11": " Your Fitness",
+      "title2": "For you he was found",
+      "title22": " Your fitness",
+      "qr": "Download our application through the App Store and Google Play to receive all new updates."
     }
   },
   "contactUS": {
@@ -80,6 +80,7 @@
     "pohne": "mobile number",
     "pohnePlace": "Mobile Number +966",
     "mes": "What's on your mind?",
-    "mesPlace": "Enter what you want to inquire about"
+    "mesPlace": "Enter what you want to inquire about",
+    "send": "Send"
   }
 }
